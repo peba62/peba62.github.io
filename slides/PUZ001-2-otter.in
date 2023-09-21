@@ -1,0 +1,40 @@
+set(prolog_style_variables).
+set(binary_res).
+set(factor).
+
+list(sos).
+%% Prove that aunt_agatha killed herself:
+%%-(killed(aunt_agatha, aunt_agatha)).
+%% Let otter compute the murder:
+-(killed(aunt_agatha, Murder)) | -($answer(killed(aunt_agatha, Murder))).
+end_of_list.
+
+list(usable).
+lives_at_dreadsbury(someone).
+killed(someone, aunt_agatha).
+lives_at_dreadsbury(aunt_agatha).
+lives_at_dreadsbury(butler).
+lives_at_dreadsbury(charles).
+equal(Person, butler) | hates(aunt_agatha, Person).
+richer(Person, aunt_agatha) | hates(butler, Person).
+
+equal(X, X).
+equal(Y, X) | -(equal(X, Y)).
+equal(X, Z) | -(equal(X, Y)) | -(equal(Y, Z)).
+equal(every_one_but(A), every_one_but(B)) | -(equal(A, B)).
+hates(D, E) | -(equal(C, D)) | -(hates(C, E)).
+hates(H, G) | -(equal(F, G)) | -(hates(H, F)).
+killed(J, K) | -(equal(I, J)) | -(killed(I, K)).
+killed(N, M) | -(equal(L, M)) | -(killed(N, L)).
+lives_at_dreadsbury(P) | -(equal(O, P)) | -(lives_at_dreadsbury(O)).
+richer(R, S) | -(equal(Q, R)) | -(richer(Q, S)).
+richer(V, U) | -(equal(T, U)) | -(richer(V, T)).
+equal(Person, aunt_agatha) | equal(Person, butler) | equal(Person, charles) | -(lives_at_dreadsbury(Person)).
+hates(Killer, Victim) | -(killed(Killer, Victim)).
+-(killed(Killer, Victim)) | -(richer(Killer, Victim)).
+-(hates(aunt_agatha, Person)) | -(hates(charles, Person)).
+hates(butler, Person) | -(hates(aunt_agatha, Person)).
+-(hates(Person, every_one_but(Person))).
+-(equal(aunt_agatha, butler)).
+end_of_list.
+

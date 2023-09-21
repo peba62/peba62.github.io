@@ -1,0 +1,22 @@
+Instance Based Methods
+
+Supervisor: Dr. Peter Baumgartner (http://www.mpi-sb.mpg.de/~baumgart/)
+Email: Peter.Baumgartner AT nicta.com.au
+
+Formal logic provides a mathematical foundation for many areas of
+computer science. Logical languages are used as specification language
+within, e.g., program development and verification, hardware design
+and verification, relational databases, and many subfields of
+Artificial Intelligence. Automated Deduction is concerned with the
+design and implementation of algorithms based on logical deduction for
+solving problems in these areas.  ``Instance Based Methods''
+are a relatively new family of methods for Automated Deduction; they share
+the principle of carrying out proof search by maintaining a set of
+instances of input formulas and analyzing it for satisfiability until
+completion.
+
+I offer several research-oriented projects centered around Instance
+Based Methods, in particular in connection with the Darwin system
+(http://goedel.cs.uiowa.edu/Darwin/), which has been co-developed by
+the supervisor.
+

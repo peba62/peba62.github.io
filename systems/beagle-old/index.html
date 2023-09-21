@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Beagle - a theorem prover for hierarchic superposition with weak abstraction
+</title>
+</head>
+    
+<body>
+<h2>Beagle - a theorem prover for hierarchic superposition with weak abstraction</h2>
+<p>Beagle is an automated theorem prover for first-order logic with equality over
+linear integer arithmetic. It accepts formulas in the FOF, TFF, and
+TFA formats of the 
+<a href="http://www.cs.miami.edu/~tptp/TPTP/TR/TPTPTR.shtml">TPTP</a> syntax.  
+
+<ul>
+<li><a href="README.txt">README.txt</a>, with further information and
+installation instructions.
+<li><a href="beagle-0.4.tgz">beagle-0.4.tgz</a>, a compressed
+tar archive containing the Scala sources. <br><br>
+    Update 06/06/2013: Version 0.4.1: be more cautious about reporting
+    "Satisfiable" or "CounterSatisfiable". In the fixed version, 
+    a saturated state not containing the empty clause is reported as
+    "Satisfiable" or "CounterSatisfiable" only if no background theories are
+    present, otherwise it is "Unknown". (This could be sharpened.)
+
+<li><a href="beagle.jar">beagle.jar</a>, a Java archive, readily executable by
+a Java RTE 1.6.
+<li>A <a href="report.pdf">paper</a> on the theory behind
+beagle and on (by now obsolete) experimental results.
+</ul>
+
+  </body>
+</html>

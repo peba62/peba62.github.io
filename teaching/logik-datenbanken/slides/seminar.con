@@ -1,0 +1,104 @@
+
+%% Definitions common to prosper and seminar classes:
+
+\def\void{}
+\newcommand{\slidesubtitle}[2][\void]{{\bfseries\color{DodgerBlueIII}
+    #2}\hfill \ifx\void#1\else{\footnotesize\begin{tabular}[c]{@{}l@{}}\llap{[}#1]%
+    \end{tabular}}\fi\vskip
+  1ex minus 0.8ex\par}
+
+
+
+
+
+\newif\ifProsper
+%% Are we using the prosper class?
+\ifx\Prosper@Version\@undefined\ifx\xProsper@Version\@undefined\typeout{NO PROSPER}\Prosperfalse\else\typeout{XPROSPER}\Prospertrue\fi\else\typeout{PROSPER}\Prospertrue\fi
+
+\ifProsper
+
+
+\newenvironment{slideitems}[1][\void]{\begin{list}{\textcolor{black}{\includegraphics[width=.4cm]{yellow-bullet-on-white}}}
+    {\setlength{\parsep}{0ex plus0.2ex minus0.1ex}
+     \setlength{\itemsep}{0.5ex plus0.2ex minus0.1ex}}
+        \ifx\void#1\else\item[]\hspace*{-\leftmargini}{\color{DodgerBlueIII}\bfseries#1}\fi}
+    {\end{list}}
+
+\newenvironment{slidesubitems}{\begin{list}{\textcolor{black}{\includegraphics[width=.3cm]{green-bullet-on-white}}}
+    {\setlength{\parsep}{0ex plus0.2ex minus0.1ex}
+     \setlength{\itemsep}{0.5ex plus0.2ex minus0.1ex}}}
+    {\end{list}}
+
+
+
+\else
+
+\newenvironment{slideitems}[1][\void]{\begin{list}{\textcolor{black}{\footnotesize\ding{55}}}
+    {\setlength{\parsep}{0ex plus0.2ex minus0.1ex}
+     \setlength{\itemsep}{0.5ex plus0.2ex minus0.1ex}}
+        \ifx\void#1\else\item[]\hspace*{-\leftmargini}{\color{DodgerBlueIII}\bfseries#1}\fi}
+    {\end{list}}
+
+\newenvironment{slidesubitems}{\begin{list}{\textcolor{black}{\footnotesize\ding{55}}}
+    {\setlength{\parsep}{0ex plus0.2ex minus0.1ex}
+     \setlength{\itemsep}{0.5ex plus0.2ex minus0.1ex}}}
+    {\end{list}}
+
+\input semrot.sty
+\slideframewidth 2pt
+\rotateheaderstrue
+
+\newslideframe{lines}{\vbox{\hrule\hbox{#1}\hrule}}
+\slideframe{lines}
+
+\newslideframe{empty}{\vbox{#1}}
+
+
+\def\printlandscape{\special{landscape}}    % Works with dvips.
+
+
+\newcommand{\slidetitle}[2][\void]{{\Large
+  \bfseries
+  %\hartreim
+%  \pocab
+  \color{DodgerBlueIII}
+    #2}\hfill \ifx\void#1\else{\footnotesize\begin{tabular}[c]{@{}l@{}}\llap{[}#1]%
+    \end{tabular}}\fi\vskip
+  2ex minus 0.5ex\par}
+% \renewcommand{\slidetitle}[2][\void]{%
+%   {\psset{linecolor=white,linewidth=0pt}
+%     \psset{fillstyle=gradient,gradmidpoint=0.99,framearc=0.5,gradangle=90}
+%     \psframe[gradbegin=DodgerBlueIII,gradend=white](-3em,-8pt)(\textwidth,-5pt)
+%    \Large
+%    \bfseries
+%    %\pocab
+%    \color{DodgerBlueIII}#2}\hfill
+%          \ifx\void#1\else{\footnotesize\begin{tabular}[c]{@{}l@{}}\llap{[}#1]%
+%            \end{tabular}}\fi
+%    \vskip 4ex minus 1.5ex\par}
+
+
+\def\citesmall#1{\hfill{\footnotesize\begin{tabular}[c]{@{}l@{}}\llap{[}#1]%
+    \end{tabular}}}
+
+
+
+
+
+
+% Text area:
+%\slidewidth 9in
+%\slideheight 6.7in
+%\paperwidth 210mm
+%\paperheight 297mm
+
+\slidewidth 240mm
+\slideheight 177mm %% Enlarging this will cause overfull vbox on output
+
+%% Slide margin  parameteres:
+%\def\slideleftmargin{1.3in}
+%\def\sliderightmargin{1.3in}
+%\def\slidetopmargin{0.2in}
+%\def\slidebottommargin{0.8in}
+
+\fi

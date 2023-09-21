@@ -1,0 +1,116 @@
+#!/bin/sh
+
+## MSPASS-yarralumla-run - 
+## This script calls first yarrralumla and then MSPASS on the given 
+## problem file.
+## MSPASS is invoked with appropriate options, depending on the options
+## given to this script (which are passed to yarralumla).
+##
+## Author: P. Baumgartner
+
+## Give full path to executable here if not in search path:
+yarralumla="yarralumla.pl"
+tme2dfg="tme2dfg.pl"
+MSPASS="MSPASS"
+
+# MSPASS_standard_options="-Auto=1 -Select=2 -Sorts=0 -IORe=2 -IEqR=0 -RInput=0"
+MSPASS_standard_options="-Auto=0 -SatInput=1 -ISpR=1 -ISpL=1 -Select=2 -Sorts=0 -IOHy=0 -IORe=2 -IEqF=0 -RInput=0 -FullRed=1 -Ordering=1  -RFRew=1 -RBRew=1 -RObv=1 -RUnC=1 -RFSub=1 -RBSub=1 -RCon=1 -RFMRR=1 -RBMRR=1 -RTaut=0 -RAED=1"
+
+## The following are determined below:
+MSPASS_extra_options=
+MSPASS_verbosity_options=
+
+## No user servicable part beyond this point
+base=
+done=
+flattening="none"
+shifting="false"
+blocking="false"
+verbose="true"
+separation="none"
+splitting="0"
+
+usage () { 
+    echo "usage: MSPASS-yarralumla-run [-q] [-splitting] [-fl] [-sh] [-sep] [-bl] FILE[.tme]"
+    echo "       -q: quiet (less output during search from MSPASS)"
+    echo "       -splitting: switch on splitting for MSPASS (-bl emplies -sp)"
+    echo "       -fl: flattening on"
+    echo "       -sh: shifting on"
+    echo "       -sep: separation on"
+    echo "       -bl: blocking on"
+    echo "       -h: help (this text)"
+    exit -1
+}
+
+if [ -z $1 ]; then usage; fi
+
+while ([ ! $done ]); do
+    if [ "$1" = "-sh" ]
+    then
+	shifting="true"
+	shift
+    elif [ "$1" = "-splitting" ]
+    then
+	splitting="-1"
+	shift
+    elif [ "$1" = "-q" ]
+    then
+	verbose="false"
+	shift
+    elif [ "$1" = "-bl" ]
+    then
+	blocking="true"
+	shift
+    elif [ "$1" = "-fl" ]
+    then
+	flattening="standard"
+	shift
+    elif [ "$1" = "-sep" ]
+    then
+	separation="nonequations"
+	shift
+    elif [ "$1" = "-h" ]
+    then
+	usage
+    elif [ $1 ]
+    then
+	base=`dirname $1`/`basename $1 .tme`
+	if [ ! -r "$base.tme" ]; then
+	    echo "File not found: $base.tme"
+	    exit -1
+	fi
+	done=1
+    else
+        echo "Incomplete argument list."
+	exit -1;
+    fi
+done
+
+## Determine options for MSPASS call
+if [ $blocking = true ]; then
+    MSPASS_extra_options="-Splits=-1 -EqualDom=1"
+else
+    MSPASS_extra_options="-Splits=$splitting -EqualDom=0"
+fi
+
+if [ $verbose = true ]; then
+    MSPASS_verbosity_options="-PGiven=1 -PDer=0"
+#    MSPASS_verbosity_options="-PGiven=1 -PDer=1 -PSub=1 -PRew=1 -PCon=1 -PMRR=1 -PUnC=1 -PAED=1"
+else
+    MSPASS_verbosity_options="-PGiven=0 -PDer=0"
+fi
+
+if [ $shifting = true ]; then
+    # this is a very special call:
+    yarralumla_flattening_options="--flattening standard --flattenhead false --flattentoplevel true --flattenequations false --flatteningextractconstants false " 
+else 
+    ## what was given on the command line:
+    yarralumla_flattening_options="--flattening $flattening"
+fi
+
+echo "$yarralumla  $yarralumla_flattening_options --separation $separation --blocking $blocking --shifting $shifting $base.tme ..."
+$yarralumla $yarralumla_flattening_options --separation $separation --blocking $blocking --shifting $shifting $base.tme
+echo "tme2dfg.pl $base-yarr.tme ..."
+$tme2dfg $base-yarr.tme
+$MSPASS $MSPASS_standard_options $MSPASS_extra_options $MSPASS_verbosity_options $base-yarr.dfg
+#

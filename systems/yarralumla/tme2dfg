@@ -1,0 +1,220 @@
+#! /home/users/baumgart/bin/swipl -G16M -L32M -q -t main -f
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 
+%%%% tme2dfg -
+%%%% convert tme files to dfg files
+%%%% 
+%%%% Author: Peter Baumgartner
+%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+:- use_module('/home/users/baumgart/prover/yarralumla/lib/fromonto').
+:- use_module('/home/users/baumgart/prover/yarralumla/misc').
+:- use_module('/home/users/baumgart/prover/yarralumla/transforms').
+:- use_module('/home/users/baumgart/prover/yarralumla/data_structures').
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+main :-
+        catch(( process_argv(InputFile, OutputFile), 
+	        process_file(InputFile, OutputFile)
+	      ), 
+	      E, (print_message(error, E), fail)),
+        halt.                                           
+main :- 
+	usage.
+
+usage :-
+	msg('Usage: tme2dfg.pl File[.tme]'),
+        halt(1).
+
+process_argv(InputFile, OutputFile) :-
+	current_prolog_flag(argv, Argv), 
+	append(_, [--|Args], Argv),
+	!,
+	get_regular_arg(Args, File),
+	basename(File, '.tme', FileBase),
+	atom_concat(FileBase,'.tme', InputFile),
+	atom_concat(FileBase,'.dfg', OutputFile).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+process_file(InputFile, OutputFile) :-
+	msg('Reading ~w ...', [InputFile]),
+	file_list_clauses(InputFile, CS),
+	length(CS, Len),
+	msg('~d clauses.', [Len]),
+	msg('Writing ~w ...', [OutputFile]),
+	onto_file(( write_dfg_header(CS),
+	            write_dfg_clauses(CS, 1),
+	            write_dfg_footer %(CS)
+	          ), OutputFile),
+	msg('Done.').
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Misc code: file handling, argument analysis
+
+file_list_clauses(File, Clauses) :-
+	from_file(findall(TL,
+			  ( repeat,
+			    read(T),
+			    ( T == end_of_file ->
+				!,
+		              fail
+			    ; to_list_clause(T, TL)
+			    )
+			  ),
+			  Clauses),
+		  File).
+
+basename(FileName, Extension, FileBaseName) :-
+	%% FileName does end in extension:
+	atom_concat(FileBaseName,Extension,FileName), !.
+basename(FileName, _Extension, FileName).
+	%% Otherwise the basename is the given FileName.
+
+
+parameter(Parameter, LegalValues, Value, Args) :-
+	append(_,[Parameter, Value|_], Args), !,
+	%% Yes, Parameter is given, check for legal value:
+	memberchk(Value, LegalValues).
+parameter(_Parameter, [DefaultValue|_MoreLegalValues], DefaultValue, _Args).
+
+get_regular_arg([Arg], Arg) :-
+	%% In case of a single arg it is easy:
+	\+ is_option(Arg).
+get_regular_arg(Args, Arg) :-
+	%% otherwise look at last two arguments
+	append(_, [A,Arg], Args),
+	\+ is_option(A), %% because otherwise Arg would be an argument
+	                 %% to option A
+	\+ is_option(Arg).
+
+
+is_option(N) :- sub_atom(N, 0, 2, _, '--').
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+write_dfg_header(CS) :-
+	writeln('begin_problem(TME_Problem).'),
+	writeln('list_of_descriptions.'),
+	writeln('    name({* Problem converted from a tme file *}).'),
+	writeln('    author({* tme2dfg.pl *}).'),
+	writeln('    status(unknown).'),
+	writeln('    description({* *}).'),
+	writeln('end_of_list.'), nl,
+	writeln('list_of_symbols.'),
+	scan_function_symbols(CS, Funs),
+	( Funs == [] ->
+	  true
+        ; writeln('functions['), 
+          write('    '), write_sig(Funs), nl,
+	  writeln('].')
+        ),
+	scan_predicate_symbols(CS, H1Preds),
+	list_to_set(H1Preds, H2Preds),
+	delete(H2Preds, (=)/2, H3Preds),
+	replaceq(H3Preds, 'not_='/2, not_equal/2, Preds),
+	( Preds == [] ->
+	  true
+        ; writeln('predicates['), 
+          write('    '), write_sig(Preds), nl,
+	  writeln('].')
+        ),
+	writeln('end_of_list.'), nl,
+	writeln('list_of_clauses(axioms, cnf).').
+
+write_sig([]).
+write_sig([P/N|R]) :-
+	format('(~w, ~w)', [P,N]),
+	( R == [] -> true ; write(', ') ), 
+	write_sig(R).
+
+write_dfg_clauses([], _N).
+write_dfg_clauses([(H :- B)|R], N) :-
+	write_dfg_clause((H :- B), N),
+	HN is N+1,
+	write_dfg_clauses(R, HN).
+
+write_dfg_clause((H :- B), _N) :-
+	write('clause('),
+	term_variables((H :- B), Vars),
+	numbervars(Vars, 0, _),
+	( Vars == [] ->
+	  true
+        ; 
+	  %% format('forall(~w~n', [Vars])
+	  write('forall('), write_term(Vars, [numbervars(true)]), 
+	  write(',')
+        ),
+	writeln('or('), write('    '),
+	write_dfg_clause_body(B),
+	( (\+ H == [], \+ B == []) -> nl, writeln('    ,') ; true ),
+	write('    '), 
+        write_dfg_clause_head(H),
+	nl, write(')'),
+	( Vars == [] ->
+	  true
+        ; write(')')
+        ),
+        writeln(').').
+%	format(', clause_~w).~n~n', [N]).  % RS: ueberfluessig geworden
+
+write_dfg_footer :-
+	writeln('end_of_list.'), nl,
+	writeln('list_of_clauses(conjectures, cnf).'),
+	writeln('end_of_list.'), nl,
+	writeln('end_problem.').
+
+write_dfg_footer(CS) :-
+	writeln('end_of_list.'), nl,
+	writeln('list_of_clauses(conjectures, cnf).'),
+	writeln('end_of_list.'), nl,
+	writeln('list_of_general_settings.'),
+	write('hypothesis'),
+	length(CS, L),
+	clause_N(1, L, ClauseNames),
+	format('~w',[ClauseNames]),
+	writeln('.'),
+	writeln('end_of_list.'),
+
+	writeln('end_problem.').
+
+clause_N(M, N, []) :-
+	M > N.
+clause_N(M, N, [ClauseName|R]) :-
+	concat_atom([clause_,M], ClauseName),
+	HM is M+1,
+	clause_N(HM, N, R).
+
+
+write_dfg_clause_head([]).
+write_dfg_clause_head([A|R]) :-
+	write_dfg_atom(A),
+	( R == [] -> true ; write(', ') ), 
+	write_dfg_clause_head(R).
+
+write_dfg_clause_body([]).
+write_dfg_clause_body([A|R]) :-
+	write('not('), write_dfg_atom(A), write(')'), 
+	( R == [] -> true ; write(', ') ), % nl,
+	write_dfg_clause_body(R).
+
+write_dfg_atom(S=T) :- 
+	!, write_dfg_atom(equal(S,T)).
+
+write_dfg_atom('not_='(S,T)) :- 
+	!, write_dfg_atom(not_equal(S,T)).
+
+write_dfg_atom(A) :-
+	write_term(A, [ignore_ops(true), max_depth(0), numbervars(true)]).
+
+
+%:- assert((user:portray('$N'(X)) :- write(X))).
+
+

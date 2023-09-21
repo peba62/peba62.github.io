@@ -1,0 +1,218 @@
+
+<dl>
+
+<dt>
+<a name="Ahrendt:etal:Disproving:IJCAR-WS:2006">&nbsp;</a>
+</dt>
+<dd>
+Wolfgang Ahrendt, Peter Baumgartner, and Hans de&nbsp;Nivelle, editors.<br>
+ <em>Third Workshop on Disproving - Non-Theorems, Non-Validity,
+  Non-Provability (DISPROVING'06)</em>, Seattle, 2006.<br>
+ Workshop at IJCAR'06.
+[&nbsp;<a href="peter-2006_bib.html#Ahrendt:etal:Disproving:IJCAR-WS:2006">bib</a>&nbsp;]
+
+</dd>
+
+
+<dt>
+<a name="Baumgartner:etal:Darwin:IJAIT:2006">&nbsp;</a>
+</dt>
+<dd>
+Peter Baumgartner, Alexander Fuchs, and Cesare Tinelli.<br>
+ <b>Implementing the Model Evolution Calculus</b>.<br>
+ <em>International Journal of Artificial Intelligence Tools</em>,
+  15(1):21--52, 2006.
+[&nbsp;<a href="peter-2006_bib.html#Baumgartner:etal:Darwin:IJAIT:2006">bib</a>&nbsp;| 
+<a href="implementing-ME-published.pdf">.pdf</a>&nbsp;]
+
+</dd>
+
+
+<dt>
+<a name="Baumgartner:Suchanek:AutomatedReasoningFOOntologies:PPSWR:2006">&nbsp;</a>
+</dt>
+<dd>
+Peter Baumgartner and Fabian&nbsp;M. Suchanek.<br>
+ <b>Automated Reasoning Support for First-Order Ontologies</b>.<br>
+ In J.J. Alferes, J.&nbsp;Bailey, W.&nbsp;May, and U.&nbsp;Schwertel, editors, <em>
+  Principles and Practice of Semantic Web Reasoning 4th International Workshop
+  (PPSWR 2006), Revised Selected Papers</em>, volume 4187 of <em>LNAI</em>. Springer,
+  2006.
+[&nbsp;<a href="peter-2006_bib.html#Baumgartner:Suchanek:AutomatedReasoningFOOntologies:PPSWR:2006">bib</a>&nbsp;| 
+<a href="PPSWR2006_long.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+Formal ontologies play an increasingly important role in demanding
+  knowledge representation applications like the Semantic Web.
+  Regarding automated reasoning support, the mainstream of research
+  focusses on ontology languages that are also Description Logics,
+  such as OWL-DL. However, many existing ontologies go beyond
+  Description Logics and use full first-order logic.  We propose a
+  novel transformation technique that allows to apply existing model
+  computation systems in such situations. We describe the
+  transformation and some variants, its properties and intended
+  applications to ontological reasoning.
+</font></blockquote>
+
+</dd>
+
+
+<dt>
+<a name="Baumgartner:etal:ModelEvolutionLearning:LPAR:2006">&nbsp;</a>
+</dt>
+<dd>
+Peter Baumgartner, Alexander Fuchs, and Cesare Tinelli.<br>
+ <b>Lemma Learning in the Model Evolution Calculus</b>.<br>
+ In Miki Hermann and Andrei Voronkov, editors, <em>Logic for
+  Programming, Artificial Intelligence and Reasoning (LPAR)</em>, volume 4246 of
+  <em>LNAI</em>, pages 572--586. Springer, 2006.
+[&nbsp;<a href="peter-2006_bib.html#Baumgartner:etal:ModelEvolutionLearning:LPAR:2006">bib</a>&nbsp;| 
+<a href="ME-lemma-learning.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+The Model Evolution (ME) Calculus is a proper lifting 
+to first-order logic of the DPLL procedure, 
+a backtracking 
+search procedure for propositional satisfiability.
+Like DPLL, the ME calculus is based on the idea of 
+incrementally building a model of the input formula
+by alternating constraint propagation steps with 
+non-deterministic decision steps.
+One of the major conceptual improvements over basic DPLL 
+is lemma learning, 
+a mechanism for generating new formulae
+that prevent later in the search
+combinations of decision steps guaranteed to lead to failure.
+We introduce three lemma generation methods for 
+ME proof procedures,
+with various degrees of power, effectiveness in reducing search,
+and computational overhead.
+Even if formally correct, 
+each of these methods presents complications 
+that do not exist at the propositional level but need to be addressed
+for learning to be effective in practice for ME.
+We discuss some of these issues and
+present 
+initial experimental results on the performance
+of an implementation within Darwin of the three learning procedures.
+</font></blockquote>
+
+</dd>
+
+
+<dt>
+<a name="Baumgartner:etal:MEFiniteModels:Disproving:2006">&nbsp;</a>
+</dt>
+<dd>
+Peter Baumgartner, Alexander Fuchs, , Hans de&nbsp;Nivelle, and Cesare Tinelli.<br>
+ <b>Computing Finite Models by Reduction to Function-Free
+  Clause Logic</b>.<br>
+ In Ahrendt et&nbsp;al. [<a href="#Ahrendt:etal:Disproving:IJCAR-WS:2006">1</a>].<br>
+ Workshop at IJCAR'06.
+[&nbsp;<a href="peter-2006_bib.html#Baumgartner:etal:MEFiniteModels:Disproving:2006">bib</a>&nbsp;| 
+<a href="ME-finite-models.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+
+  Recent years have 
+  seen
+  considerable interest in procedures for
+  computing 
+  finite
+  models of first-order logic specifications. One
+  of the major paradigms, MACE-style model building, is based on
+  reducing model search to
+  a sequence of 
+  propositional
+  satisfiability problems and applying (efficient) SAT solvers
+  to them.
+  A
+  problem with this method is that it does not scale well, as the
+  propositional formulas to be considered may become very large. 
+  <p>
+  We propose instead to reduce model search to
+  a sequence of
+  satisfiability problems 
+  made
+  of function-free first-order clause sets, and
+  to apply (efficient) theorem provers capable of deciding
+  such problems.
+  The 
+  main 
+  appeal of this method is that 
+  first-order clause
+  sets grow more slowly than their propositional counterparts, thus
+  allowing for more space efficient reasoning. 
+  <p>
+  In the paper we describe the method in detail and show how it is
+  integrated into one such 
+  prover,
+  Darwin, our implementation of the
+  Model Evolution calculus. The results are general, however,
+  as our approach can used in principle with any system that decides
+  the satisfiability of function-free first-order clause sets.
+  <p>
+  To demonstrate
+  its
+  practical feasibility, we tested our approach
+  on all satisfiable problems from the TPTP library. Our methods can
+  solve a significant subset of these problems,
+  which overlaps but is not included in the subset of problems
+  solvable by state-of-the-art finite model builders such as
+  Paradox and Mace4.
+</font></blockquote>
+
+</dd>
+
+
+<dt>
+<a name="Baumgartner:Schmidt:BUMGEnhanced:IJCAR:2006">&nbsp;</a>
+</dt>
+<dd>
+Peter Baumgartner and Renate Schmidt.<br>
+ <b>Blocking and Other Enhancements for Bottom-Up Model
+  Generation Methods</b>.<br>
+ In U.&nbsp;Furbach and N.&nbsp;Shankar, editors, <em>Automated Reasoning --
+  Third International Joint Conference on Automated Reasoning (IJCAR)</em>, volume
+  4130 of <em>LNAI</em>, pages 125--139. Springer, 2006.
+[&nbsp;<a href="peter-2006_bib.html#Baumgartner:Schmidt:BUMGEnhanced:IJCAR:2006">bib</a>&nbsp;| 
+<a href="BUMG-enhanced.pdf">.pdf</a>&nbsp;]
+<blockquote><font size="-1">
+In this paper we introduce several new improvements to the bottom-up
+model generation (BUMG) paradigm.
+Our techniques are based on non-trivial transformations of first-order
+problems into a certain implicational form, namely range-restricted
+clauses.
+These refine existing transformations to range-restricted
+form by extending the domain of interpretation with new Skolem terms
+in a more careful and deliberate way.
+Our transformations also extend BUMG with a blocking technique for
+detecting recurrence in models.
+Blocking 
+is based on a conceptually rather simple encoding together
+with standard equality theorem proving and redundancy elimination
+techniques.
+This provides a general-purpose method for finding small models.
+The presented techniques are implemented and have been successfully
+tested with existing theorem provers on the satisfiable problems from
+the TPTP library.
+</font></blockquote>
+
+</dd>
+
+
+<dt>
+<a name="baader_et_al:DSP:2006:562">&nbsp;</a>
+</dt>
+<dd>
+Franz Baader, Peter Baumgartner, Robert Nieuwenhuis, and Andrei Voronkov.<br>
+ <b>05431 Abstracts Collection -- Deduction and
+  Applications</b>.<br>
+ In Franz Baader, Peter Baumgartner, Robert Nieuwenhuis, and Andrei
+  Voronkov, editors, <em>Deduction and Applications</em>, number 05431 in Dagstuhl
+  Seminar Proceedings. Internationales Begegnungs- und Forschungszentrum
+  (IBFI), Schloss Dagstuhl, Germany, 2006.<br>
+ &lt;http://drops.dagstuhl.de/opus/volltexte/2006/562&gt; [date of
+  citation: 2006-01-01].
+[&nbsp;<a href="peter-2006_bib.html#baader_et_al:DSP:2006:562">bib</a>&nbsp;| 
+<a href="http://drops.dagstuhl.de/opus/volltexte/2006/562">http</a>&nbsp;]
+
+</dd>
+</dl>

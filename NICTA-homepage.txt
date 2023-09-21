@@ -1,0 +1,66 @@
+Peter Baumgartner
+
+Principal Researcher; Research Leader
+
+Research Interests
+
+Advancement of automated deduction, in particular first-order logic theorem proving and its applications. In particular, the Model Evolution calculus, its implementation (the Darwin system), and application to software verification and knowledge representation. 
+
+
+NICTA projects
+
+Involvement in leadership positions: Provably Correct Business Rules and Processes (current); Situation Awareness by Inference and Logic (past).
+
+Collaborations
+
+Recent collaborations include academic institutions and government organizations. In particular the University of Koblenz (Germany), the Max-Planck Institute for Computer Science (Germany), the University of Iowa (USA), Defence Science Technology Organization (Australia) and New South Wales Land and Property Information (Australia).
+
+
+Career Summary
+
+Principal researcher with NICTA since 2005 with positions as Program Leader, Research Group Manager, and Research Leader; Research scientist at the Max-Planck-Institut for Computer Science in Saarbrücken (Germany) from 2003 to 2005; Research scientist at the University of Koblenz (Germany), from 1990 to 2003; Honorary research associate at the University of New Brunswick (Canada) in 1998; Acting professorship at the University Giessen (Germany) in 2000 and 2001; Research scientist at the Technical University of Munich (Germany) from 1989 to 1990.
+
+Qualifications
+
+Habilitation for Computer Science at the University of Koblenz, Germany, 2002; Doctoral Degree in Computer Science, University of Koblenz, Germany, 1996; Diplom in Informatik, Technical University of Munich, Germany, 1988.
+
+Publications
+
+See here (http://users.cecs.anu.edu.au/~baumgart/publications/) for a full list.
+
+Invited talks
+
+- A First-Order Davis-Putnam-Loveland-Logemann Procedure, Distinguished paper track, IJCAI, 2011
+- Logical Engineering with Instance-Based Methods, CADE, 2007.
+
+Program Committees
+
+I have served on numerous program committees of international conferences such
+as CADE, IJCAR, LPAR, IJCAI, FroCos, TABLEAUX, JELIA, and AAAI, as well as
+smaller workshop. 
+
+See here (http://users.cecs.anu.edu.au/~baumgart/activities/) for a comprehensive list.
+
+Organizational
+
+Conference chair and program co-chair of the Innternational Joint Conference on Automated Reasoning (IJCAR, Syndey, Australia, 2008).
+
+Conference steering committee memberships: Automated Deduction (CADE, 2003-2009); International Joint Conference on Automated Reasoning (IJCAR, 2006-2012), Automated Reasoning with Tableaux and Related Methods (TABLEAUX, 2009, and earlier).
+
+President ("Sprecher") of the special interest group "Deduction Systems" of the German computer science society (2004-2008).
+
+President of the steering committee of the international workshop "First-Order Theorem Proving" (2003-2006).
+
+I (co-)organized numerous workshops with international conferences, and I co-organized a Dagstuhl seminar "Deduction" in 2005.
+
+
+Teaching
+
+In recent years, I have regularly lectured parts of a graduate level course "Overview of Logic and Computation", and I have regularly given a course on "Automated Reasoning in First-Order Logic" at the logic summer school, Canberra, Australia.
+
+In the past, I also taught courses on Logics and Databases, Verification of Distributed Systems, Knowledge Representation, and introductory courses into computer science. I also supervised numerous students at the graduate level.
+
+I gave tutorials at IJCAR, CADE and TABLEAUX conferences on various topics in automated reasoning.
+
+
+Detailled web page : http://users.rsise.anu.edu.au/~baumgart/

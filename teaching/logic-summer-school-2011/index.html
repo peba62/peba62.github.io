@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Logic Summer School December 2011 - Overview of Automated Reasoning</TITLE>
+</HEAD>
+
+
+
+<H1>Logic Summer School December 2011 - Overview of Automated Reasoning</H1>
+
+<p>
+A course at the <a href="http://lss.cecs.anu.edu.au/">Logic Summer
+School</a>, Canberra, December, 2011. 
+
+<p>
+Lecturer: <a href="http://users.rsise.anu.edu.au/~baumgart/">Peter
+Baumgartner</a> 
+
+<h3>Additional Information</h3>
+<ul>
+<li>
+<a href="slides-automated-reasoning.pdf">Slides</a> <br>
+See last two slides for "further reading"
+
+<li>Example problems discussed in the lectures, see the
+files for more information how to run them:
+<ul>
+  <li><a href="threecolor-relational.p">Three-coloring
+problem instance (unsatisfiable)</a>
+  <li><a href="threecolor-relational-satisfiable.p">Three-coloring
+problem instance (satisfiable)</a>
+  <li><a href="threecolor-relational-fundep.p">Three-coloring
+      problem - (dis)prove of functional dependency</a>
+  <li><a href="group-commutativity.p">Disprove "all groups are abelian"</a><br> 
+Run it with <pre>paradox n-queens-symmetry.p</pre>
+  <li><a href="NLP209+1.p">Model computation for discourse representation:
+  eliminating inconsistent interpretations</a><br> 
+Run with <pre>darwin -pl 3 -fd true NLP209+1.p</pre>
+  <li><a href="n-queens-symmetry.p">Symmetries in the N-Queens problem</a>
+</ul>
+
+<p>The above problems are written in the widely TPTP-syntax. 
+<a href="http://www.tptp.org">TPTP</a> (Thousands of Problems for
+Theorem Proving) is a collection of test problems for automated
+theorem proving. 
+<li>Further reading
+<ul>
+<li> 
+A good, recent textbook with an emphasis on theory reasoning
+  (arithmetic, arrays) for software verification:
+    Aaron Bradley and Zohar Manna, 
+<a href="http://theory.stanford.edu/~arbrad/book.html">The 
+Calculus of Computation</a>, Springer, 2007
+<li>Another good one, on what the title says, comes with OCaml code:
+John Harrison, 
+<a href="http://www.cl.cam.ac.uk/~jrh13/atp/index.html">Handbook
+of Practical Logic and Automated Reasoning</a>, Cambridge, 2009
+  <li><a href="http://plato.stanford.edu/entries/reasoning-automated/">Stanford
+  Encyclopedia of Philosophie article on Automated Reasoning</a> 
+  <li><a href="http://en.wikipedia.org/wiki/Automated_theorem_proving">Wikipedia
+  article on Automated Theorem Proving</a>
+<li><a href="http://en.wikipedia.org/wiki/Boolean_satisfiability_problem">
+Wikipedia article on Boolean Satisfiability Problem (propositional logic)
+<li><a href="http://en.wikipedia.org/wiki/Satisfiability_Modulo_Theories">
+Wikipedia article on Satisfiability Modulo Theories (SMT)
+  </a>
+  </ul>
+
+<li>The above pages already contain a lot of links to theorem proving
+software. 
+<ul><li>
+The automated theorem
+prover <a href="http://www.spass-prover.org">SPASS</a> is an
+implementation of the 
+"modern" version of resolution with equality, the superposition
+calculus, and comes with a comprehensive set of examples and
+documentation. A good choice to start with.
+<li> Running the n-queens example above requires
+the
+<a href="http://www.uni-koblenz.de/~bpelzer/edarwin/">E-Darwin</a>
+system. It is rather experimental. A more mature version, however
+without equality, is 
+<lie <a href="http://combination.cs.uiowa.edu/Darwin/">Darwin</a>
+<li> <a href="http://www.cs.chalmers.se/~koen/folkung/">Paradox</a> is
+a finite-model finder, to
+disprove "all groups are abelian" above
+</ul>
+</ul>
+
+</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=prv_mail 2006.3.15)  15 MAR 2006 14:22
+entering extended mode
+**&prv_mail _region_.tex
+(./_region_.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, nohyphenation, loaded.
+CUSTOMISED FORMAT. Preloaded files:
+        .
+    mail.tex
+ article.cls    2001/04/21 v1.4e Standard LaTeX document class
+  size10.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+   segoe.sty    
+  ot1msg.fd    2005/06/12 Fontinst v1.801 font definitions for OT1/msg.
+        .
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+(/home/users/baumgart/texmf/tex/latex/auctex/preview.sty
+Package: preview 2005/09/25 11.82 (AUCTeX/preview-latex)
+
+(/home/users/baumgart/texmf/tex/latex/auctex/prtightpage.def
+\PreviewBorder=\dimen103
+)
+(/home/users/baumgart/texmf/tex/latex/auctex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count87
+\hfuzz=\dimen104
+(/home/users/baumgart/texmf/tex/latex/auctex/prauctex.cfg))
+(/home/users/baumgart/texmf/tex/latex/auctex/prfootnotes.def)
+\pr@snippet=\count88
+\pr@box=\box26
+
+Preview: Fontsize 10pt
+)  !name(mail.tex) !offset(-3)  ) 
+Here is how much of TeX's memory you used:
+ 165 strings out of 95482
+ 2271 string characters out of 1191728
+ 50273 words of memory out of 1000001
+ 3466 multiletter control sequences out of 10000+50000
+ 7610 words of font info for 22 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,0n,22p,161b,38s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+No pages of output.

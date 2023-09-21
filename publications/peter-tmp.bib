@@ -1,0 +1,2424 @@
+@STRING{addison	= "Addison Wesley, Reading, MA" }
+@STRING{aij	= "Artificial Intelligence" }
+@STRING{ap	= "Academic Press, London" }
+@STRING{bi	= "B.I. Wissenschaftsverlag" }
+@STRING{cacm	= "Communications of the Association for Computing Machinery" }
+@STRING{cade	= "Proceedings of the Conference on Automated Deduction" }
+@STRING{cade-10	= "Proceedings of the 10\/$^{th}$ Conference on Automated
+		  Deduction, Kaiserslautern, Germany, July 1990" }
+@STRING{cade-11	= "Proceedings of the 11\/$^{th}$ Conference on Automated
+		  Deduction, Saratoga Springs, NY, USA, June 1992" }
+@STRING{cade-12	= "Proceedings of the 12\/$^{th}$ Conference on Automated
+		  Deduction, Nancy, France, June/July 1994" }
+@STRING{elsevier= "Elsevier Science Publishers B.V.\ (North--Holland)
+		  Amsterdam" }
+@STRING{fbinformatik="Fachberichte Informatik" }
+@STRING{gmd	= "GMD" }
+@STRING{gwai	= "Proceedings of the German Workshop on Artificial
+		  Intelligence" }
+@STRING{gwai90	= "GWAI-90 --- Proceedings of the 14\/$^{th}$ German Workshop
+		  on Artificial Intelligence, Eringerfeld, September 1990" }
+@STRING{gwai91	= "GWAI-91 --- Proceedings of the 15\/$^{th}$ German Workshop
+		  on Artificial Intelligence, Bonn, September 1991" }
+@STRING{gwai92	= "GWAI-92 --- Proceedings of the 16\/$^{th}$ German Workshop
+		  on Artificial Intelligence" }
+@STRING{iclp	= "Proceedings of the International Conference on Logic
+		  Programming" }
+@STRING{ijcai	= "International Joint Conference on Artificial Intelligence" }
+@STRING{ijcai95	= "IJCAI-95 --- Proceedings of the 14\/$^{th}$ International
+		  Joint Conference on Artificial Intelligence, Montreal" }
+@STRING{ijcai97	= "IJCAI-97 --- Proceedings of the 15\/$^{th}$ International
+		  Joint Conference on Artificial Intelligence, Nagoya" }
+@STRING{inria	= "Institut National de Recherche en Informatique et en
+		  Automatique" }
+@STRING{jar	= "Journal of Automated Reasoning" }
+@STRING{jlp	= "Journal of Logic Programming" }
+@STRING{jsc	= "Journal of Symbolic Computation" }
+@STRING{jsl	= "Journal of Symbolic Logic" }
+@STRING{lnai	= "Lecture Notes in Artificial Intelligence" }
+@STRING{lncs	= "Lecture Notes in Computer Science" }
+@STRING{rta	= "Proceedings of the Conference on Rewriting Techniques and
+		  Applications" }
+@STRING{springer= "Springer Verlag, Berlin, Heidelberg, New-York" }
+@STRING{sri	= "Stanford Research Institute (SRI)" }
+@STRING{sri-adr	= "333 Ravenswood Ave., Menlo Parc, CA 94025" }
+@STRING{tcs	= "Theoretical Computer Science" }
+@STRING{toappear= "To appear" }
+@STRING{tum	= "Technische Universit{\"a}t M{\"u}nchen, Institut f{\"u}r
+		  Mathematik und Informatik" }
+@STRING{unif	= "Proceedings of the International Workshop on Unification" }
+@STRING{unikola	= "Universit{\"a}t Koblenz-Landau" }
+@STRING{unikolaaddress="Institut f{\"u}r Informatik, Rheinau 1, D-56075
+		  Koblenz" }
+
+	  
+
+@Article{Baumgartner:Furbach:DeductionPersonalizedDocuments:AnnalsMathAI:03,
+  author = 	 {Peter Baumgartner and Ulrich Furbach},
+  title = 	 {{Automated Deduction Techniques for the Management of
+		  Personalized Documents}},
+  journal = 	 {Annals of Mathematics and Artificial Intelligence --
+Special Issue on Mathematical Knowledge Management},
+  year = 	 {Kluwer Academic Publishers, 2003},
+  OPTkey = 	 {},
+  volume =	 {38},
+  number =	 {1},
+  OPTpages = 	 {},
+  OPTmonth = 	 {},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/MKMLinzJournalFinal.ps",
+  OPTannote = 	 {}
+}
+
+@Article{	  Baumgartner:Kuehn:AbducingCoreference:JLAC:00,
+  author	= "Peter Baumgartner and Michael K{\"u}hn",
+  title		= "{Abducing Coreference by Model Construction}",
+  journal = "Journal of Language and Computation",
+  year = {2000},
+  volume = {1},
+  number = {2},
+  editors =       {C. Monz and M. de Rijke},
+  pages = {175--190},
+  publisher = "Hermes Science Publishers",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/abdcoref-jlac.ps.gz"
+		  ,
+  abstract = "In this paper, we argue that the resolution of anaphoric
+  expressions in an utterance is essentially an \emph{abductive} task
+  following \cite{Hobbs:etal:InterpretationAsAbduction:AIJ:93} who use
+  a weighted abduction scheme on horn clauses to deal with
+  reference. We give a semantic representation for utterances
+  containing anaphora that enables us to compute possible antecedents
+  by abductive inference. We extend the disjunctive model construction
+  procedure of \emph{hyper tableaux}
+  \cite{Baumgartner:Furbach:Niemelae:HyperTableau:JELIA:96,Kuehn:RigidHyperTableaux:KI:97}
+  with a clause transformation turning the abductive task into a model
+  generation problem and show the completeness of this transformation
+  with respect to the computation of abductive explanations. This
+  abductive inference is applied to the resolution of anaphoric
+  expressions in our general model constructing framework for
+  incremental discourse representation which we argue to be useful for
+  computing information updates from natural language utterances."
+}
+
+
+
+
+@Article{Aravindan:Baumgartner:ViewDeletion:JSC:00,
+  author = 	 {Chandrabose Aravindan and Peter Baumgartner},
+  title = 	 {Theorem Proving Techniques for View Deletion in Databases},
+  journal = 	 jsc,
+  year = 	 {2000},
+  OPTkey = 	 {},
+  volume =	 {29},
+  number =	 {2},
+  pages =	 {119-147},
+  OPTmonth = 	 {},
+  abstract = "In this paper, we show how techniques from first-order theorem
+  proving can be used for efficient deductive database updates.  The
+  key idea is to transform the given database, together with the update
+  request, into a (disjunctive) logic program and to apply the hyper
+  tableaux calculus
+  to solve the original update problem. The resulting
+  algorithm has the following properties: it works goal-directed
+  (i.e.\ the search is driven by the update request), it is rational
+  in the sense that it satisfies certain rationality postulates
+  stemming from philosophical works on belief dynamics, and, unlike
+  comparable approaches, it is
+  of  polynomial space complexity.  \\
+  To obtain soundness and completeness results, the hyper tableau
+  calculus is slightly modified for minimal model reasoning. Besides a 
+  direct proof we give an alternate proof which gives insights into
+  the relation to previous approaches. As a by-product we thereby
+  derive a  soundness and completeness result of hyper tableaux for
+  computing  minimal abductive explanations.",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ftp-final.ps.gz"
+,
+  OPTannote = 	 {}
+}
+
+@Article{	  Baumgartner:etal:TechnologicalViewPoint:KI:98,
+  author	= {Peter Baumgartner and Ingo Dahn and J{\"u}rgen Dix and
+		  Ulrich Furbach and Micha K{\"u}hn and Frieder Stolzenburg
+		  and Bernd Thomas},
+  title		= {Automated Deduction: A Technological Point of View},
+  journal	= {KI},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/technology.ps.gz",
+  year		= 1998,
+  volume	= 12,
+  number	= 4,
+  pages		= {7-14}
+}
+
+@Article{	  Baumgartner:Furbach:Stolzenburg:RestartMEAnswers:AI:97,
+  author	= "Peter Baumgartner and Ulrich Furbach and Frieder
+		  Stolzenburg",
+  title		= "{Computing Answers with Model Elimination}",
+  optcrossref	= "",
+  optkey	= "",
+  journal	= aij,
+  year		= "1997",
+  volume	= "90",
+  number	= "1--2",
+  pages		= "135--176",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ARME-AIJ.ps.gz"
+		  ,
+  abstract	= "We demonstrate that theorem provers using model
+		  elimination (ME) can be used as answer-complete
+		  interpreters for {\em disjunctive logic programming\/}.
+		  More specifically, we introduce a family of restart
+		  variants of model elimination, and we introduce a mechanism
+		  for computing answers. Building on this, we develop a new
+		  calculus called {\em ancestry restart ME\/}. This variant
+		  admits a more restrictive regularity restriction than
+		  restart ME, and, as a side effect, it is in particular
+		  attractive for computing definite answers. The presented
+		  calculi can also be used successfully in the context of
+		  {\em automated theorem proving}. We demonstrate
+		  experimentally that it is more difficult to compute
+		  non-trivial answers to goals than to prove the {\em
+		  existence} of answers.",
+  optmonth	= "",
+  optannote	= ""
+}
+
+@Article{	  Baumgartner:Bruening:MESS:JAR:97,
+  author	= "Peter Baumgartner and Stefan Br{\"u}ning",
+  title		= "{A Disjunctive Positive Refinement of Model Elimination
+		  and its Application to Subsumption Deletion}",
+  journal	= jar,
+  volume	= "19",
+  number	= "2",
+  pages		= "205--262",
+  year		= {1997},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/mesubsumption.ps.gz"
+		  ,
+  abstract	= "The Model Elimination (ME) calculus is a refutationally
+		  complete, goal-oriented calculus for first-order clause
+		  logic. In this paper, we introduce a new variant called
+		  {\em disjunctive positive ME (DPME)\/}; it improves on
+		  Plaisted's positive refinement of ME in that reduction
+		  steps are allowed only with positive literals stemming from
+		  clauses having at least two positive literals (so-called
+		  {\em disjunctive\/} clauses). \par DPME is motivated by its
+		  application to various kinds of {\em subsumption\/}
+		  deletion: in order to apply subsumption deletion in ME
+		  equally successful as in Resolution, it is crucial to
+		  employ a version of ME which minimizes ancestor context
+		  (i.e.\ the necessary A-literals to find a refutation). DPME
+		  meets this demand. We describe several variants of ME with
+		  subsumption, with the most important ones being {\em ME
+		  with backward and forward subsumption\/} and the {\em
+		  T$^{*}$-Context Check\/}. We compare their pruning power,
+		  also taking into consideration the well-known regularity
+		  restriction. \par All proofs are supplied. The
+		  practicability of our approach is demonstrated with
+		  experiments."
+}
+
+@Article{	  Baumgartner:LinearizingCompletion:JAR:96,
+  author	= "Peter Baumgartner",
+  title		= "{Linear and Unit-Resulting Refutations for Horn Theories}",
+  optcrossref	= "",
+  optkey	= "",
+  journal	= jar,
+  year		= "1996",
+  volume	= "16",
+  number	= "3",
+  pages		= "241--319",
+  month		= "June",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/lincomp.ps.gz"
+		  ,
+  abstract	= "We present a new transformation method by which a given
+		  Horn theory is transformed in such a way that resolution
+		  derivations can be carried out which are both linear (in
+		  the sense of Prologs SLD-resolution) {\em and\/}
+		  unit-resulting (i.e.\ the resolvents are unit clauses).
+		  This is not trivial since although both strategies alone
+		  are complete, their na{{\"\i}}{}ve combination is not.
+		  Completeness is recovered by our method through a
+		  completion procedure in the spirit of Knuth-Bendix
+		  completion, however with different ordering criteria. A
+		  powerful redundancy criterion helps to find a finite system
+		  quite often. \\ The transformed theory can be used in
+		  combination with linear calculi such as e.g.\ (theory)
+		  model elimination to yield sound, complete and efficient
+		  calculi for full first order clause logic over the given
+		  Horn theory. \\ As an example application, our method
+		  discovers a generalization of the well-known linear
+		  paramodulation calculus for the combined theory of equality
+		  and strict orderings. \\ The method has been implemented
+		  and has been tested in conjunction with a model elimination
+		  theorem prover.",
+  optnote	= "",
+  optannote	= ""
+}
+
+@Article{	  Baumgartner:etal:DeduktionUndLP:KI:96,
+  author	= "Peter Baumgartner and J{\"u}rgen Dix and Ulrich Furbach
+		  and Dorothea Sch{\"a}fer and Frieder Stolzenburg",
+  title		= "{Deduktion und Logisches Programmieren}",
+  journal	= {KI},
+  year		= 1996,
+  volume	= 10,
+  number	= 2,
+  pages		= {34-39}
+}
+
+@Article{	  Baumgartner:Furbach:RME:JAR:94,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{Model Elimination without Contrapositives and its
+		  Application to PTTP}},
+  journal	= {Journal of Automated Reasoning},
+  year		= {1994},
+  volume	= {13},
+  pages		= {339--359},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/nocontra-jar.ps.gz"
+		  ,
+  abstract	= " We give modifications of model elimination which do not
+		  necessitate the use of contrapositives. These restart model
+		  elimination calculi are proven sound and complete and their
+		  implementation by PTTP is depicted. The corresponding proof
+		  procedures are evaluated by a number of runtime experiments
+		  and they are compared to other well known provers. Finally
+		  we relate our results to other calculi, namely the
+		  connection method, modified problem reduction format and
+		  Near-Horn Prolog. ",
+  OPTnote		= {Short version in: Proceedings of CADE-12, Springer LNAI 814, 1994, pp 87--101}
+}
+
+@Article{	  Baumgartner:Furbach:Consolution:JSC:93,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{Consolution as a Framework for Comparing Calculi}},
+  journal	= {Journal of Symbolic Computation},
+  year		= {1993},
+  volume	= {16},
+  number	= {5},
+  publisher	= {Academic Press},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/consolution.ps.gz"
+		  ,
+  pages		= {445--477},
+  abstract	= "In this paper, stepwise and nearly stepwise simulation
+		  results for a number of first-order proof calculi are
+		  presented and an overview is given that illustrates the
+		  relations between these calculi. For this purpose, we
+		  modify the {\em consolution\/} calculus in such a way that
+		  it can be instantiated to {\em resolution\/}, {\em tableaux
+		  model elimination\/}, a {\em connection method\/} and
+		  Loveland's {\em model elimination\/}. "
+}
+
+
+
+@InProceedings{Baumgartner:etal:LivingBooks:WI:2003,
+  author = 	 {Peter Baumgartner and Ulrich Furbach and Margret
+		  Gro{\ss}-Hardt},
+  title = 	 {Living Books},
+  booktitle = 	 {Wirtschaftsinformatik 2003},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  pages =	 {693--706},
+  year =	 {2003},
+  editor =	 {Wolfgang Uhr and Werner Esswein and Eric Schoop},
+  volume =	 {1},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  publisher =	 {Physica-Verlag},
+  OPTannote = 	 {}
+}
+
+@InProceedings{	  Baumgartner:etal:LivingBook:SSGRR:2002,
+  author	= "Peter Baumgartner and Margret Gross-Hardt and Anna B. Simon",
+  title		= "{Living Book -- An Interactive and Personalized Book}",
+  booktitle = {SSGRR 2002s - International Conference on Advances in Infrastructure for e-Business, e-Education, e-Science, and e-Medicine on the Internet},
+  editor = "Veljko Milutinovic", 
+  year          = {2002},
+  publisher = "Published electronically (http://www.ssgrr.it/en/ssgrr2002s/papers.htm)",
+  url = "http://www.uni-koblenz.de/~peter/ssgrr_final.pdf",
+  abstract = "In the era of information technology, providing high
+  quality and state of the art educational material is quite a
+  challenge and requires the use of new media. The In2Math project at
+  the University of Koblenz-Landau develops in this context the {\em
+  Living Book\/}; Living Book means personalized user oriented
+  educational material together with interactive components. The
+  Living Book aims at supporting the fundamental parts of
+  undergraduate classes in theoretical computer science.  The main
+  goal is to support the active, explorative and self-determined
+  learning in lectures, tutorials and selfstudy.  \par This paper
+  describes the main aspects of the Living Book and explains the
+  concepts and ideas behind it as well as the techniques used to
+  realized these concepts. "
+}
+
+@InProceedings{	  Baumgartner:Tinelli:ModelEvolutionCalculus:CADE:2003,
+  author	= "Peter Baumgartner and Cesare Tinelli",
+  title		= "{The Model Evolution Calculus}",
+  crossref = {CADE:03},
+  pages = {350-364},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/BaumgartnerTinelli-CADE-19.ps"
+		  ,
+  abstract = "The DPLL procedure, due to Davis, Putnam,
+	    Logemann, and Loveland, is the basis of some of
+	    the most successful propositional satisfiability
+	    solvers to date.  Although originally devised as a
+	    proof-procedure for first-order logic, it has been
+	    used almost exclusively for propositional logic so
+	    far because of its highly inefficient treatment of
+	    quantifiers, based on instantiation into ground
+	    formulas.
+	    \par
+	    The recent FDPLL calculus by Baumgartner was the
+	    first successful attempt to lift the procedure to
+	    the first-order level without recurring to ground
+	    instantiations.  FDPLL lifts to the first-order
+	    case the core of the DPLL procedure, the splitting
+	    rule, but ignores other aspects of the procedure
+	    that, although not necessary for completeness, are
+	    crucial for its effectiveness in practice.  
+	    \par
+	    In this paper, we present a new calculus loosely
+	    based on FDPLL that lifts these aspects as well.
+	    In addition to being a more faithful litfing of
+	    the DPLL procedure, the new calculus contains a
+	    more systematic treatment of {\em universal literals\/},
+	    one of FDPLL's optimizations, and so has the
+	    potential of leading to much faster
+	    implementations."
+}
+
+
+@InProceedings{Baumgartner:Etal:LivingBook:CADE:2003,
+  author = 	 {Peter Baumgartner and Ulrich Furbach and Margret Gross-Hardt and Alex Sinner},
+  title = 	 {{\ttfamily\bfseries 'Living Book' :- 'Deduction', 'Slicing', 'Interaction'.} -- System Description},
+  crossref = "CADE:03",
+  abstract = "This system description is about a real-world application of
+automated deduction. The system that we describe -- The Living
+Book -- is a tool for the management of personalized teaching
+material.  The main goal of
+the Living Book system  is to support the active, explorative and
+self-determined learning in lectures, tutorials and self study. 
+It includes a course on 'logic for computer scientists' with a
+uniform access to various tools like theorem provers and an
+interactive tableau editor\footnote{This work is sponsored by EU
+IST-Grant TRIAL-SOLUTION and  Bmbf-Grant In2Math.}. This course is
+routinely used within teaching undergraduate courses at our
+university."
+}
+
+@InProceedings{	  Baumgartner:FDPLL:CADE:00,
+  author	= "Peter Baumgartner",
+  title		= "{FDPLL -- A First-Order Davis-Putnam-Logeman-Loveland Procedure}",
+  pages = {200--219},
+  crossref = {CADE:00},
+  url = "http://www.uni-koblenz.de/~peter/FDPLL/FDPLLshort.ps",
+  abstract = "FDPLL is a directly lifted version of the well-known
+  Davis-Putnam-Logeman-Loveland (DPLL) procedure.  While DPLL is based
+  on a splitting rule for case analysis wrt.\ ground and complementary
+  literals, FDPLL uses a lifted splitting rule, i.e.\ the case
+  analysis is made wrt.\ non-ground and complementary literals now.
+  \par
+  The motivation for this lifting is to bring together successful first-order
+  techniques like unification and subsumption to the propositionally
+  successful DPLL procedure.
+  \par
+  At the heart of the method is a new technique to represent
+  first-order interpretations, where a literal specifies truth values
+  for all its ground instances, unless there is a more specific
+  literal specifying opposite truth values.  Based on this idea, the
+  FDPLL calculus is developed and proven as
+  strongly complete."
+}
+
+@InProceedings{Baumgartner:Massacci:TamingXOR:CL2000:00,
+  author	= "Peter Baumgartner and Fabio Massacci",
+  title		= "{The Taming of the (X)OR}",
+  abstract	= "Many key verification problems such as bounded
+		  model-checking, circuit verification and logical
+		  cryptanalysis are formalized with combined clausal and
+		  affine logic (i.e. clauses with xor as the connective) and
+		  cannot be efficiently (if at all) solved by using CNF-only
+		  provers. \par We present a decision procedure to
+		  efficiently decide such problems. The Gauss-DPLL procedure
+		  is a tight integration in a unifying framework of a
+		  Gauss-Elimination procedure (for affine logic) and a
+		  Davis-Putnam-Logeman-Loveland procedure (for usual clause
+		  logic). \par The key idea, which distinguishes our approach
+		  from others, is the full interaction bewteen the two parts
+		  which makes it possible to maximise (deterministic)
+		  simplification rules by passing around newly created unit
+		  or binary clauses in either of these parts. We show the
+		  correcteness and the termination of Gauss-DPLL under very
+		  liberal assumptions.",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-2-2000.ps.gz",
+  crossref =  {CL2000:00},
+  OPTkey = 	 {},
+  pages =	 {508--522},
+  OPTyear = 	 {},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTannote = 	 {}
+}
+
+
+
+@InProceedings{Baumgartner:Kuehn:AbductiveCoreference:ICOS:99,
+  author = 	 {Peter Baumgartner and Michael K{\"u}hn},
+  title = 	 {Abductive Coreference by Model Construction},
+  booktitle = 	 {ICoS-1 Inference in Computational Semantics},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  OPTpages = 	 {},
+  year =	 {1999},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  address =	 {Institute for Logic, Language and Computation, University of Amsterdam},
+  month =	 {August},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-6-99.ps.gz"
+		  ,
+  abstract	= "In this paper, we argue that the resolution of anaphoric
+		  expressions in an utterance is essentially an {\em
+		  abductive\/} task following [HSAM93] who use a weighted
+		  abduction scheme on horn clauses to deal with reference. We
+		  give a semantic representation for utterances containing
+		  anaphora that enables us to compute possible antecedents by
+		  abductive inference. We extend the disjunctive model
+		  construction procedure of {\em hyper tableaux\/} [BFN96,
+		  K{\"u}h97] with a clause transformation turning the
+		  abductive task into a model generation problem and show the
+		  completeness of this transformation with respect to the
+		  computation of abuctive explanations. This abductive
+		  inference is applied to the resolution of anaphoric
+		  expressions in our general model constructing framework for
+		  incremental discourse representation [K{\"u}h99] which we
+		  argue to be useful for computing information updates from
+		  natural language utterances [Vel96]."
+}
+
+
+@InProceedings{Baumgartner:Eisinger:Furbach:CCC:CADE:99,
+  author = 	 {Peter Baumgartner and Norbert Eisinger and Ulrich
+		  Furbach},
+  title = 	 {A Confluent Connection Calculus},
+  crossref =  {CADE:99},
+  pages =	 {329--343},
+  url = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-23-98.ps.gz",
+  abstract = 	 "This work
+is concerned with basic issues of the design of calculi and proof
+procedures for first-order connection methods and tableaux
+calculi. Proof procedures for these type of calculi developed so far suffer
+from not exploiting proof confluence, and very often  
+unnecessarily rely on a heavily backtrack oriented control regime. 
+\par
+As a new result, we present a variant of a connection calculus and prove
+its {\em strong\/} completeness. This enables the design of backtrack-free 
+control regimes. To demonstrate that the underlying
+fairness condition is reasonably implementable we define an effective
+search strategy."
+}
+
+
+
+@InProceedings{Baumgartner:Horton:Spencer:MergePathHyperTableaux:Tableaux:99,
+  author = 	 {Peter Baumgartner and J.D. Horton and Bruce Spencer},
+  title = 	 {Merge Path Improvements for Minimal Model Hyper
+		  Tableaux},
+  OPTbooktitle = 	 {},
+  crossref =  {TABLEAUX:99},
+  OPTkey = 	 {},
+  OPTpages = 	 {},
+  OPTyear = 	 {},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  OPTannote = 	 {},
+  abstract = {We combine techniques originally developed for refutational
+  first-order theorem proving within the clause tree framework with techniques
+  for minimal model computation developed within the hyper tableau
+  framework. This combination generalizes well-known
+  tableaux techniques like complement splitting and folding-up/down. 
+  We argue that this
+  combination allows for efficiency improvements over previous, related
+  methods. It is motivated by application to diagnosis tasks; in
+  particular the problem of avoiding redundancies in the diagnoses of
+  electrical circuits with reconvergent fanouts is addressed by the
+  new technique. In 
+  the paper we develop as our main contribution in a more general way
+  a sound and complete calculus for  propositional circumscriptive
+  reasoning in the presence of minimized and varying predicates.
+  },
+ url = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-1-99.ps.gz"
+}
+
+
+@InProceedings{	  Baumgartner:Schaefer:CouplingKIVPROTEIN:TOOLS98:99,
+  author	= {Peter Baumgartner and Dorothea Sch{\"a}fer},
+  title		= {Model Elimination with Simplification and its Application
+		  to Software Verification},
+  booktitle	= {Tool Support for System Specification, Development, and
+		  Verification},
+  optcrossref	= {},
+  optkey	= {},
+  optpages	= {},
+  publisher	= {Springer-Verlag Wien NewYork},
+  year		= {1999},
+  editor	= {Rudolf Berghammer and Yassine Lakhnech},
+  series	= {Advances in Computer Science},
+  optnumber	= {},
+  opttype	= {},
+  optchapter	= {},
+  optaddress	= {},
+  optedition	= {},
+  optmonth	= {},
+  optannote	= {},
+  abstract	= "This paper describes our approach of coupling the
+		  interactive software verification system KIV with the Model
+		  Elimination based, complete automated theorem prover
+		  PROTEIN. In order to make this combination work in
+		  practice, we propose to incorporate domain knowledge
+		  readily given from the KIV domain into PROTEIN. More
+		  specifically, we extend Model Elimination by a concept of
+		  simplification based on conditional rewrite rules. The
+		  extension is defined in such a way that rewrite rules as
+		  given from the KIV system can easily be accommodated. This
+		  yields better performance for proof automatization and thus
+		  relieves the system engineer from more interactions. In the
+		  paper, we describe the new simplification technique, show
+		  completeness, and demonstrate the benefits with practical
+		  experiments from the KIV domain.",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/tools98-final-conform.ps.gz"
+		  
+}
+
+@InProceedings{	  Baumgartner:HyperNextGeneration:Tableaux:98,
+  author	= "Peter Baumgartner",
+  title		= "{Hyper Tableaux --- The Next Generation}",
+  crossref	= "TABLEAUX:98",
+  pages =	 "60--76",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-32-97.ps.gz"
+		  ,
+  abstract	= "``Hyper tableaux'' is a sound and complete calculus for
+		  first-order clausal logic. The present paper introduces an
+		  improvement which removes the major weakness of the
+		  calculus, which is the need to (at least partially) blindly
+		  guess ground-instantiations for certain clauses. This
+		  guessing is now replaced by a unification-driven technique.
+		  \par The calculus is presented in detail, which includes a
+		  completeness proof. Completeness is proven by using a novel
+		  approach to extract a model from an open branch. This
+		  enables semantical redundancy criteria which are not
+		  present in related approaches."
+}
+
+@InProceedings{	  Baumgartner:Furbach:RMERefinements:FTP:97,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Refinements for Restart Model Elimination}",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ftp97-final.ps.gz"
+		  ,
+  booktitle	= "Proceedings of the International Workshop on First Order
+		  Theorem Proving (FTP 97)",
+  series	= "Technical Report",
+  publisher	= "RISC-Linz",
+  year		= "1997",
+  month		= oct,
+  optnumber	= "",
+  optvolume	= "",
+  abstract	= " We introduce and discuss a number of refinements for
+		  restart model elimination (RME). Most of these refinements
+		  are motivated by the use of RME as an interpreter for
+		  disjunctive logic programming. Especially head selection
+		  function, computation rule, strictness and independence of
+		  the goal clause are motivated by aiming at a procedural
+		  interpretation of clauses. Other refinements like
+		  regularity and early cancellation pruning are techniques to
+		  handle the tremendous search space. We discuss these
+		  techniques and investigate their compatibility. As a new
+		  result we give a proof of completeness for RME with early
+		  cancellation pruning; we furthermore show that this
+		  powerful refinement is compatibel with regularity tests. "
+}
+
+@InProceedings{	  Aravindan:Baumgartner:ViewDeletion:ILPS:97,
+  author	= "Chandrabose Aravindan and Peter Baumgartner",
+  title		= "{A Rational and Efficient Algorithm for View Deletion in
+		  Databases}",
+  crossref	= "ILPS:97",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/dbu.ps.gz",
+  abstract	= " In this paper, we show how techniques from disjunctive
+		  logic programming and classical first-order theorem proving
+		  can be used for efficient (deductive) database updates. The
+		  key idea is to tranform the given database together with
+		  the update request into a disjunctive logic program and
+		  apply disjunctive techniques (such as minimal model
+		  reasoning) to solve the original update problem. We present
+		  two variants of our algorithm both of which are of
+		  polynomial space complexity. One variant, which is based on
+		  offline preprocessing, is of polynomial time complexity. We
+		  also show that both variants are rational in the sense that
+		  they satisfy certain rationality postulates stemming from
+		  philosophical works on belief dynamics."
+}
+
+@InProceedings{	  Baumgartner:Furbach:CalculiForDLP:ILPS:97,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Calculi for Disjunctive Logic Programming}",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ilps97-proceedings.ps.gz"
+		  ,
+  crossref	= "ILPS:97",
+  abstract	= "We introduce a bottom-up and a top-down calculus for
+		  disjunctive logic programming (DLP). The bottom-up
+		  calculus, hyper tableaux, is depicted in its ground version
+		  and its relation to fixed point approaches from the
+		  literature is investigated. The top-down calculus, restart
+		  model elimination (RME), is presented as a sound and
+		  complete answer-computing mechanism for DLPs, and its
+		  relation to hyper tableaux is discussed. \\ In two aspect
+		  this represents an extension of SLD-resolution for Horn
+		  clause logic programming: RME {\em is\/} SLD-resolution
+		  when restricted to Horn clauses, and it has a direct
+		  counterpart to the immediate consequence operator for Horn
+		  clauses. Furthermore we discuss, that hyper tableaux can be
+		  seen as an extension of SLO-resolution."
+}
+
+@InProceedings{	  Baumgartner:etal:TableauxDiagnosis:IJCAI:97,
+  author	= "Peter Baumgartner and Peter Fr{\"o}hlich and Ulrich
+		  Furbach and Wolfgang Nejdl",
+  title		= "{Semantically Guided Theorem Proving for Diagnosis
+		  Applications}",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ijcai-diagnosis-proceedings.ps.gz"
+		  ,
+  crossref	= "IJCAI:97",
+  pages		= "460--465",
+  abstract	= " In this paper we demonstrate how general purpose
+		  automated theorem proving techniques can be used to solve
+		  realistic model-based diagnosis problems. For this we
+		  modify a model generating tableau calculus such that a
+		  model of a correctly behaving device can be used to guide
+		  the search for minimal diagnoses. Our experiments show that
+		  our general approach is competitive with specialized
+		  diagnosis systems."
+}
+
+@InProceedings{	  Baumgartner:etal:TableauxDiagnosis:Tableaux:97,
+  author	= "Peter Baumgartner and Peter Fr{\"o}hlich and Ulrich
+		  Furbach and Wolfgang Nejdl",
+  title		= "{Tableaux for Diagnosis Applications}",
+  crossref	= "TABLEAUX:97",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/tableaux97-final.ps.gz"
+		  ,
+  pages		= "76--90",
+  abstract	= "In \cite{nej96} a very efficient system for solving
+		  diagnosis tasks has been described, which is based on
+		  belief revision procedures and uses first order logic
+		  system descriptions. In this paper we demonstrate how such
+		  a system can be rigorously formalized from the viewpoint of
+		  deduction by using the calculus of hyper tableaux
+		  \cite{Baumgartner:etal:HyperTableau:JELIA:96}. The benefits
+		  of this approach are twofold: first, it gives us a clear
+		  logical description of the diagnosis task to be solved;
+		  second, as our experiments show, the approach is feasible
+		  in practice and thus serves as an example of a successful
+		  application of deduction techniques to real-world
+		  applications."
+}
+
+@InProceedings{	  Baumgartner:Furbach:Niemelae:HyperTableau:JELIA:96,
+  author	= "Peter Baumgartner and Ulrich Furbach and Ilkka
+		  Niemel{\"a}",
+  title		= "{Hyper Tableaux}",
+  optcrossref	= "",
+  optkey	= "",
+  opteditor	= "",
+  optvolume	= "",
+  number	= "1126",
+  series	= lnai,
+  optpages	= "",
+  booktitle	= "Proc. JELIA 96",
+  year		= "1996",
+  opteditor	= "",
+  optpages	= "",
+  organization	= "European Workshop on Logic in AI",
+  publisher	= "Springer",
+  optaddress	= "",
+  optmonth	= "",
+  optannote	= "",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/tableaux-jelia-llncs.ps.gz"
+		  ,
+  abstract	= " This paper introduces a variant of clausal normal form
+		  tableaux that we call ``hyper tableaux''. Hyper tableaux
+		  keep many desirable features of analytic tableaux while
+		  taking advantage of the central idea from (positive) hyper
+		  resolution, namely to resolve away all negative literals of
+		  a clause in a single inference step. Another feature of the
+		  proposed calculus is the extensive use of universally
+		  quantified variables. This enables new efficient
+		  forward-chaining proof procedures for full first order
+		  theories as variants of tableaux calculi."
+}
+
+@InProceedings{	  Baumgartner:Stolzenburg:CME:Tableaux:95,
+  author	= {Peter Baumgartner and Frieder Stolzenburg},
+  title		= {{Constraint Model Elimination and a PTTP-Implementation}},
+  pages		= {201--216},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/rheinfels.ps.gz"
+		  ,
+  abstract	= "In constraint logic programming, proof procedures for {\em
+		  Horn} clauses are enhanced with an interface to efficient
+		  constraint solvers. In this paper we show how to
+		  incorporate constraint processing into a general, non-Horn
+		  theorem proving calculus. \par A framework for a new
+		  calculus is introduced which combines model elimination
+		  with constraint solving, following the lines of
+		  B{\"u}rckert (1991). A prototype system has been
+		  implemented rapidly by only combining a PROLOG technology
+		  implementation of model elimination and PROLOG with
+		  constraints. Some example studies, e.g. taxonomic
+		  reasoning, show the advantages and some problems with this
+		  procedure.",
+  crossref	= "TABLEAUX:95"
+}
+
+@InProceedings{	  Baumgartner:Furbach:Stolzenburg:RestartMEAnswers:IJCAI:95,
+  author	= {Peter Baumgartner and Ulrich Furbach and Frieder
+		  Stolzenburg},
+  title		= {{Model Elimination, Logic Programming and Computing
+		  Answers}},
+  crossref	= "IJCAI:95",
+  volume	= {1},
+  pages		= {335--340},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ijcai-me+ans.ps.gz"
+		  ,
+  abstract	= "We prove that theorem provers using model elimination (ME)
+		  can be used as answer complete interpreters for {\em
+		  disjunctive logic programming\/}. For this, the restart
+		  variant of ME with a mechanism for computing answers and
+		  the ancestry refinement is introduced. Furthermore, we
+		  demonstrate that in the context of {\em automated theorem
+		  proving\/} it is much more difficult to compute
+		  (non-trivial) answers to goals, instead of only proving the
+		  {\em existence\/} of answers. It holds that resolution with
+		  subsumption is {\em not\/} answer complete. We consider
+		  puzzle examples and give a comparative study of OTTER,
+		  SETHEO and our restart model elimination prover PROTEIN. "
+}
+
+@InProceedings{	  Baumgartner:TME:ECAI:94,
+  author	= {Peter Baumgartner},
+  title		= "{Refinements of Theory Model Elimination and a Variant
+		  without Contrapositives}",
+  booktitle	= {11th European Conference on Artificial Intelligence, ECAI
+		  94},
+  year		= {1994},
+  editor	= {A.G. Cohn},
+  publisher	= {Wiley},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/ecai-final.ps.gz"
+		  ,
+  abstract	= "Theory Reasoning means to build-in certain knowledge about
+		  a problem domain into a deduction system or calculus, such
+		  as model elimination. We present several complete versions
+		  of highly restricted theory model elimination (TME)
+		  calculi. These restrictions allow (1) to keep fewer path
+		  literals in extension steps than in related calculi, and
+		  (2) to discard proof attempts with multiple occurrences of
+		  literals along a path (i.e.\ regularity holds). On the
+		  other hand, we obtain by small modifications to TME
+		  versions which do not need contrapositives ({\`a} la
+		  Near-Horn Prolog). We show how regularity can be adapted
+		  for these versions. The {\em independence of the goal
+		  computation rule\/} holds for all variants. Comparative
+		  runtime results for our PTTP-implementations are supplied.",
+  optpages	= {90--94},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:Furbach:RME:CADE12:94,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{Model Elimination without Contrapositives}},
+  booktitle	= {Automated Deduction -- CADE-12},
+  year		= {1994},
+  editor	= {A. Bundy},
+  publisher	= {Springer},
+  pages		= {87--101},
+  volume	= {814},
+  series	= lnai,
+  url		= "http://www.uni-koblenz.de/~peter/Publications/nocontra-cade-final.ps.gz"
+		  ,
+  abstract	= " We present modifications of model elimination which do
+		  not necessitate the use of contrapositives. These restart
+		  model elimination calculi are proven sound and complete.
+		  The corresponding proof procedures are evaluated by a
+		  number of runtime experiments and they are compared to
+		  other well known provers. Finally we relate our results to
+		  other calculi, namely the connection method, modified
+		  problem reduction format and Near-Horn Prolog. "
+}
+
+@InProceedings{	  Baumgartner:Furbach:PROTEIN:CADE12:94,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{PROTEIN: A {\em PRO\/}ver with a {\em T\/}heory
+		  {\em E\/}xtension {\em I\/}nterface}},
+  booktitle	= {Automated Deduction -- CADE-12},
+  year		= {1994},
+  editor	= {A. Bundy},
+  publisher	= {Springer},
+  pages		= {769--773},
+  volume	= {814},
+  series	= lnai,
+  url		= "http://www.uni-koblenz.de/~peter/Publications/protein-cade-final.ps.gz"
+		  ,
+  abstract	= "PROTEIN ({\em PRO\/}ver with a {\em T\/}heory {\em
+		  E\/}xtension {\em IN\/}terface) is a PTTP-based first order
+		  theorem prover over built-in theories. Besides various
+		  standard-refinements known for model elimination, PROTEIN
+		  also offers a variant of model elimination for case-based
+		  reasoning and which does not need contrapositives. ",
+  optnote	= "Available in the WWW, URL: {\small\tt
+		  http://www.uni-koblenz.de/ag-ki/Systems/PROTEIN/}"
+}
+
+@InProceedings{	  Baumgartner:OrderedTheoryResolution:LPAR:92,
+  author	= {Peter Baumgartner},
+  title		= "{An Ordered Theory Resolution Calculus}",
+  booktitle	= {Logic Programming and Automated Reasoning (Proceedings)},
+  year		= {1992},
+  month		= {July},
+  editor	= {A. Voronkov},
+  publisher	= {Springer},
+  address	= {St. Petersburg, Russia},
+  pages		= {119--130},
+  series	= lnai,
+  volume	= "624",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/lparfinal.ps.gz"
+		  ,
+  abstract	= "In this paper we present an ordered theory resolution
+		  calculus and prove its completeness. Theory reasoning means
+		  to relieve a calculus from explicitly drawing inferences in
+		  a given theory by special purpose inference rules (e.g.
+		  E-resolution for equality reasoning). We take advantage of
+		  orderings (e.g. simplification orderings) by disallowing to
+		  resolve upon clauses which violate certain maximality
+		  constraints; stated positively, a resolvent may only be
+		  built if all the selected literals are maximal in their
+		  clauses. By this technique the search space is drastically
+		  pruned. As an instantiation for theory reasoning we show
+		  that equality can be built in by rigid E-unification. "
+}
+
+@InProceedings{	  Baumgartner:TME:GWAI:92,
+  author	= {Peter Baumgartner},
+  title		= "{A Model Elimination Calculus with Built-in Theories}",
+  booktitle	= gwai92,
+  url		= "http://www.uni-koblenz.de/~peter/Publications/gwai-final.ps.gz"
+		  ,
+  year		= {1992},
+  editor	= {H.-J. Ohlbach},
+  publisher	= {Springer},
+  pages		= {30--42},
+  series	= lnai,
+  volume	= "671",
+  abstract	= "The {\em model elimination calculus} is a linear,
+		  refutationally complete calculus for first order clause
+		  logic. We show how to extend this calculus with a framework
+		  for {\em theory reasoning}. Theory reasoning means to
+		  separate the knowledge of a given domain or theory and
+		  treat it by special purpose inference rules. We present two
+		  versions of theory model elimination: the one is called
+		  {\em total theory model elimination} (which allows e.g. to
+		  treat equality in a rigid E-resolution style), and the
+		  other is called {\em partial theory model elimination}
+		  (which allows e.g. to treat equality in a paramodulation
+		  style). "
+}
+
+@InProceedings{	  Baumgartner:91a,
+  author	= {Peter Baumgartner},
+  title		= {{A Completeness Proof Technique for Resolution with
+		  Equality}},
+  booktitle	= {GWAI '91 -- 15. Fachtagung f{\"u}r K{\"u}nstliche
+		  Intelligenz},
+  year		= 1991,
+  editor	= {Th. Christaller},
+  publisher	= {Springer},
+  pages		= {12--22},
+  note		= {Informatik Fachberichte 285},
+  annote	= {11 Seiten}
+}
+
+@InProceedings{	  Baumgartner:90b,
+  author	= {Peter Baumgartner},
+  title		= {{Combining Horn Clause Logic with Rewrite Rules}},
+  booktitle	= {{Artificial Intelligence IV -- Methodology, Systems,
+		  Applications}},
+  year		= {1990},
+  editor	= {Ph. Jorrand, V. Sgurev},
+  publisher	= {Norh Holland},
+  annote	= {We show how to extend a Horn clause specification with
+		  equality, where the equational theory is defined by a
+		  canonical term rewrite system. This is achieved by a
+		  transformation scheme which directly builds in a theory
+		  unification procedure a la narrowing into the Horn clauses.
+		  The advantages of this approach are, for the first, its
+		  independency from the calculus, and for the second, the
+		  directed and thus very efficient treatment of equality.}
+}
+
+
+@Book{		  Baumgartner:TheoryReasoningConnectionCalculi:LNAI:98,
+  author	= "Peter Baumgartner",
+  title		= "{Theory Reasoning in Connection Calculi}",
+  publisher	= "Springer",
+  year		= "1998",
+  optcrossref	= "",
+  optkey	= "",
+  volume	= "1527",
+  optnumber	= "",
+  series	= lnai,
+  url		= "http://www.uni-koblenz.de/~peter/thesis.html",
+  optaddress	= "",
+  optedition	= "",
+  optmonth	= "",
+  optannote	= ""
+}
+
+@InProceedings{	  Baumgartner:Petermann:TheoryReasoning:DFGBook:98,
+  author	= "Peter Baumgartner and Uwe Petermann",
+  title		= "{Chapter II.6: Theory Reasoning}",
+  chapter	= "Special Calculi and Refinements",
+  crossref	= "Bibel:Schmitt:DFGBook:98",
+  optkey	= "",
+  optpublisher	= "",
+  optyear	= "",
+  opteditor	= "",
+  pages		= "191--224",
+  volume	= "I: Foundations. Calculi and Refinements",
+  optnumber	= "",
+  optseries	= "",
+  optaddress	= "",
+  optedition	= "",
+  optmonth	= "",
+  opttype	= "",
+  optnote	= "",
+  optannote	= ""
+}
+
+
+@InCollection{	  Baumgartner:FDPLL:IJCAIBook:02,
+  author	= {Peter Baumgartner},
+  title		= {{A First-Order Logic Davis-Putnam-Logemann-Loveland Procedure}},
+  booktitle	= {AI in the new Millenium},
+  optpages	= {},
+  publisher	= {Morgan Kaufmann},
+  year		= {2002},
+  editor	= {Gerhard Lakemeyer and Bernhard Nebel},
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-3-2002.pdf",
+  optchapter	= {},
+  optaddress	= {},
+  optmonth	= {},
+  note	= {This book collects extended versions of contributions to the International Joint Conference on Artificial Intelligence (IJCAI 2001) distinguished paper track.},
+  optannote	= {},
+}
+
+
+
+@InProceedings{	  Baumgartner:Furbach:VariantsClausalTableaux:DFGBook:98,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Chapter I.3: Variants of Clausal Tableaux}",
+  crossref	= "Bibel:Schmitt:DFGBook:98",
+  optkey	= "",
+  optpublisher	= "",
+  optyear	= "",
+  opteditor	= "",
+  pages		= "73--102",
+  volume	= "I: Foundations. Calculi and Refinements",
+  optnumber	= "",
+  optseries	= "",
+  optaddress	= "",
+  optedition	= "",
+  optmonth	= "",
+  opttype	= "",
+  optnote	= "",
+  optannote	= ""
+}
+
+@InCollection{	  Baumgartner:Eisinger:Furbach:CCC:WB60:99,
+  author	= {Peter Baumgartner and Norbert Eisinger and Ulrich
+		  Furbach},
+  title		= {A Confluent Connection Calculus},
+  booktitle	= {Intellectics and Computational Logic -- Papers in Honor of
+		  Wolfgang Bibel},
+  optpages	= {},
+  publisher	= {Kluwer},
+  year		= {1999},
+  editor	= {Steffen H{\"o}lldobler},
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-23-98.ps.gz"
+		  ,
+  optchapter	= {},
+  optaddress	= {},
+  optmonth	= {},
+  optnote	= {},
+  optannote	= {},
+  abstract	= "This work is concerned with basic issues of the design of
+		  calculi and proof procedures for first-order connection
+		  methods and tableaux calculi. Proof procedures for these
+		  type of calculi developed so far suffer from not exploiting
+		  proof confluence, and very often unnecessarily rely on a
+		  heavily backtrack oriented control regime. \par As a new
+		  result, we present a variant of a connection calculus and
+		  prove its {\em strong\/} completeness. This enables the
+		  design of backtrack-free control regimes. To demonstrate
+		  that the underlying fairness condition is reasonably
+		  implementable we define an effective search strategy. We
+		  show that with the new approach the search space can be
+		  exponentially smaller than those of current,
+		  backtracking-oriented proof procedures based on {\em
+		  weak\/} completeness results."
+}
+
+
+
+
+
+@InProceedings{Baumgartner:etal:KRHyperInsideModelBasedDeductionApplications:CADE-19-WS:2003,
+  author = 	 {Peter Baumgartner and Ulrich Furbach and Margret Gross-Hardt and Thomas Kleemann and Christoph Wernhard},
+  title = 	 {KRHyper Inside --- Model Based Deduction in Applications},
+  booktitle = 	 {Proc.\ CADE-19 Workshop on Novel Applications of Deduction Systems},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  OPTpages = 	 {},
+  year =	 {2003},
+  url = "http://www.uni-koblenz.de/~peter/Publications/novel.ps",
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  OPTannote = 	 {},
+  abstract = "Three real world applications are depicted which all have in common,
+that their core component is a full first order theorem prover, based
+on the hyper tableau calculus. These applications concern information
+retrieval in electronic publishing, the integration of description
+logics with other knowledge representation techniques and XML query
+processing."
+}
+
+
+
+
+@TechReport{	  baumgartner:etal:13:2003,
+  author	= "Peter Baumgartner and Ulrich Furbach and Margret
+		  Gross-Hardt and Alex Sinner",
+  title		= "{'Living Book' :- 'Deduction', 'Slicing', 'Interaction'.}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2003}",
+  type		= "Fachberichte Informatik",
+  number	= "13--2003",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-13-2003.pdf"
+		  ,
+  abstract	= "This system description is about a real-world application
+		  of automated deduction. The system that we describe -- The
+		  Living Book -- is a tool for the management of personalized
+		  teaching material. The main goal of the Living Book system
+		  is to support the active, explorative and self-determined
+		  learning in lectures, tutorials and self study. It includes
+		  a course on 'logic for computer scientists' with a uniform
+		  access to various tools like theorem provers and an
+		  interactive tableau editor. This course is routinely used
+		  within teaching undergraduate courses at our university. "
+}
+
+@TechReport{	  baumgartner:etal:6:2003,
+  author	= "Peter Baumgartner and Ulrich Furbach and Margret
+		  Gro{\ss}-Hardt",
+  title		= "{Living Books}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2003}",
+  type		= "Fachberichte Informatik",
+  number	= "6--2003",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-6-2003.pdf"
+		  ,
+  abstract	= "In this paper we introduce a personalized way of
+		  presenting learning material, which is in particular suited
+		  for the use in e-Learning environments. We will explain the
+		  knowledge-based aspects of this technology, and we
+		  demonstrate with an example the additional feature of
+		  interactivity, by which the approach deserves the name
+		  'Living Book'. The various possibilities of using Living
+		  Books in university teaching are discussed."
+}
+
+@TechReport{baumgartner:etal:2:2003,
+  author	= "Peter Baumgartner and Margret Gross-Hardt and Alex Sinner",
+  title		= "{Living Book -- Deduction, Slicing, and Interaction}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2003}",
+  type		= "Fachberichte Informatik",
+  number	= "2--2003",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-2-2003.pdf"
+		  ,
+  abstract	= "The Living Book is a system for the management of
+personalized and scenario specific teaching material. The main goal of
+the system is to support the active, explorative and self-determined
+learning in lectures, tutorials and self study. The Living Book
+includes a course on 'logic for computer scientists' with a uniform
+access to various tools like theorem provers and an interactive
+tableau editor. It is routinely used within teaching undergraduate
+courses at our university.
+\par
+This paper describes the Living Book and the use of theorem proving
+technology as a core component in the knowledge management system
+(KMS) of the Living Book.  The KMS provides a {\em scenario
+  management\/} component where teachers may describe those parts of
+given documents that are relevant in order to achieve a certain
+learning goal. The task of the KMS is to assemble new documents from a
+database of elementary units called 'slices' (definitions, theorems,
+and so on) in a scenario-based way (like 'I want to prepare for an
+exam and need to learn about resolution').
+\par
+The computation of such assemblies is carried out by a
+model-generating theorem prover for first-order logic with a default
+negation principle. Its input consists of meta data that describe the
+dependencies between different slices, and logic-programming style
+rules that describe the scenario-specific composition of slices.
+Additionally, a user model is taken into account that contains
+information about topics and slices that are known or unknown to a
+student. A model computed by the system for such input then directly
+specifies the document to be assembled.
+\par
+This paper introduces the e-learning context we are faced with,
+motivates our choice of logic and presents the newly developed
+calculus used in the KMS."
+}
+
+@TechReport{baumgartner:tinelli:1:2003,
+  author	= "Peter Baumgartner and Cesare Tinelli",
+  title		= "{The Model Evolution Calculus}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2003}",
+  type		= "Fachberichte Informatik",
+  number	= "1--2003",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-1-2003.pdf"
+		  ,
+  abstract	= "The DPLL procedure, due to Davis, Putnam,
+	    Logemann, and Loveland, is the basis of some of
+	    the most successful propositional satisfiability
+	    solvers to date.  Although originally devised as a
+	    proof-procedure for first-order logic, it has been
+	    used almost exclusively for propositional logic so
+	    far because of its highly inefficient treatment of
+	    quantifiers, based on instantiation into ground
+	    formulas.
+	    \par
+	    The recent FDPLL calculus by Baumgartner was the
+	    first successful attempt to lift the procedure to
+	    the first-order level without recurring to ground
+	    instantiations.  FDPLL lifts to the first-order
+	    case the core of the DPLL procedure, the splitting
+	    rule, but ignores other aspects of the procedure
+	    that, although not necessary for completeness, are
+	    crucial for its effectiveness in practice.  
+	    \par
+	    In this paper, we present a new calculus loosely
+	    based on FDPLL that lifts these aspects as well.
+	    In addition to being a more faithful litfing of
+	    the DPLL procedure, the new calculus contains a
+	    more systematic treatment of {\em universal literals\/},
+	    one of FDPLL's optimizations, and so has the
+	    potential of leading to much faster
+	    implementations."
+}
+
+@TechReport{baumgartner:3:2002,
+  author	= "Peter Baumgartner",
+  title		= "{A First-Order Logic Davis-Putnam-Logemann-Loveland
+		  Procedure}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2002}",
+  type		= "Fachberichte Informatik",
+  number	= "3--2002",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-3-2002.pdf"
+		  ,
+  abstract	= " The Davis-Putnam-Logemann-Loveland procedure (DPLL) was
+		  introduced in the early 60s as a proof procedure for
+		  first-order logic. Nowadays, only its propositional logic
+		  core component is widely used in efficient propositional
+		  logic provers and respective applications. This success
+		  motivates to reconsider lifting DPLL to the first-order
+		  logic level in a more contemporary way, by exploiting
+		  successful first-order techniques like ``unification''.
+		  Following this idea, in this paper a first-order logic
+		  version of DPLL, FDPLL, is presented. \par While
+		  propositional DPLL is based on a splitting rule for case
+		  analysis wrt.\  ground and complementary literals, FDPLL
+		  uses a lifted splitting rule, i.e.\  the case analysis is
+		  made wrt.\ non-ground and complementary literals now. To
+		  make this work, a new way of treating variables is
+		  employed. It comes together with a compact way of
+		  representing and reasoning with first-order logic
+		  interpretations, much like propositional DPLL reasons about
+		  propositional truth assignments. As a nice consequence,
+		  FDPLL naturally decides the class of
+		  Bernays-Sch{\"o}nfinkel formulas, which is notoriously
+		  difficult for most other calculi."
+}
+
+
+@InProceedings{Baumgartner:Furbach:Thomas:ModelBasedDeductionForKR:WLP:2002,
+  author = 	 {Peter Baumgartner and Ulrich Furbach and Bernd Thomas},
+  title = 	 {Model Based Deduction for Knowledge Representation},
+  booktitle = 	 {17. WLP: Workshop Logische Programmierung,
+                 {TU} {D}resden, {D}ecember 11--13,  2002},
+  pages = 	 {156-166},
+  year = 	 {2002},
+  editor =	 {Bertram Fronh\"ofer and Steffen H\"olldobler},
+  number = 	 {TUD--FI03--03},
+  series = 	 {Technische Berichte der Fakult\"at Informatik},
+  month = 	 {April},
+  organization = {TU Dresden, 01062 Dresden},
+  note = 	 {ISSN 1430--211X},
+  url = "LP-workshop.ps.gz"
+}
+
+
+
+@InProceedings{Baumgartner:Furbach:ModelBasedDeductionForKR:SemanticWeb:2002,
+  author = 	 {Peter Baumgartner and Ulrich Furbach},
+  title = 	 {Model Based Deduction for Knowledge Representation (Position Paper)},
+  booktitle = 	 {International Workshop on the Semantic Web, Workshop at WWW2002},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  OPTpages = 	 {},
+  year =	 {2002},
+  editor =	 {Martin Frank, Natasha Noy,Steffen Staab},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  url = "DeductionForKRWWW.ps.gz",
+  annote =	 {Online-Proceedings available at \texttt{http://semanticweb2002.aifb.uni-karlsruhe.de/programme.htm}}
+}
+
+@Misc{Baumgartner:KMSDeliverable:2001,
+  OPTkey = 	 {},
+  author =	 {Peter Baumgartner},
+  title =	 {{Knowledge Management System}},
+  OPThowpublished = {},
+  OPTmonth = 	 {},
+  OPTyear = 	 {},
+  note =	 {Trial-Solution project deliverable. Available as \verb|http://www.uni-koblenz.de/~peter/KMS-deliverable.pdf|},
+  OPTannote = 	 {}
+}
+
+@TechReport{baumgartner:furbach:2:2002,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Automated Deduction Techniques for the Management of
+		  Personalized Documents}",
+  institution	= "{Universit{\"a}t Koblenz-Landau}",
+  year		= "{2002}",
+  type		= "Fachberichte Informatik",
+  number	= "2--2002",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-2-2002.pdf"
+		  ,
+  abstract	= " This work is about a ``real-world'' application of
+		  automated deduction. The application is the management of
+		  documents (such as mathematical textbooks) as they occur in
+		  a readily available tool. In this ``Slicing Information
+		  Technology tool'', documents are decomposed (``sliced'')
+		  into small units. A particular application task is to
+		  assemble a new document from such units in a selective way,
+		  based on the user's current interest and knowledge. \par It
+		  is argued that this task can be naturally expressed through
+		  logic, and that automated deduction technology can be
+		  exploited for solving it. More precisely, we rely on
+		  first-order clausal logic with some default negation
+		  principle, and we propose a model computation theorem
+		  prover as a suitable deduction mechanism. \par Beyond
+		  solving the task at hand as such, with this work we
+		  contribute to the quest for arguments in favor of automated
+		  deduction techniques in the ``real world''. Also, we argue
+		  why we think that automated deduction techniques are the
+		  best choice here."
+}
+
+
+
+
+@InProceedings{Baumgartner:Blohm:MKM:01,
+  author = 	 {Peter Baumgartner and Antje Blohm},
+  title = 	 {Automated Deduction Techniques for the 
+Management of Personalized Documents},
+  booktitle = 	 {Proc. of  {\em MKM 2001 --
+      First International Workshop on Mathematical Knowledge Management\/}},
+  url = "MKMLinzFinal.ps.gz",
+  year = 	 {2001},
+  address = {Linz, Austria},
+  OPTkey = 	 {}
+}
+
+
+
+@Unpublished{Baumgartner:Blohm:GrossHardt:OMDocIssues:OpenMathWs:01,
+  author = 	 {Peter Baumgartner and Antje Blohm and Margret Gross-Hardt},
+  title = 	 {OMDoc in Use -- Experiences and issues in mathematical knowledge management},
+  note = 	 {{\em OpenMath Workshop\/}, Linz, Austria, September 2001},
+  OPTkey = 	 {},
+  OPTmonth = 	 {},
+  OPTyear = 	 {},
+  OPTannote = 	 {}
+}
+
+
+@InProceedings{Baumgartner:DeductionPersonalizedDokuments:FutureDirections:01,
+  author = 	 {Peter Baumgartner},
+  title = 	 {Automated Deduction Techniques for the 
+Management of Personalized Documents},
+  booktitle = 	 {Proc. of the IJCAR-Workshop {\em Future Directions in Automated Reasoning}},
+  url = "CadeWSFutureDirectionsFinal.ps.gz",
+  year = 	 {2001},
+  address = {Siena, Italy},
+  OPTkey = 	 {},
+  editor =	 {Manfred Kerber}
+}
+
+
+
+
+
+@TechReport{baumgartner:zhang:5:2000,
+  author        = "Peter Baumgartner and Hantao Zhang~(Eds.)",
+  title         = "{FTP 2000 -- Third International Workshop on First-Order
+                  Theorem Proving, St Andrews, Scotland, July 2000}",
+  institution   = "Universit{\"a}t Koblenz-Landau",
+  year          = "2000",
+  type          = "Fachberichte Informatik",
+  number        = "5--2000",
+  language      = "english",
+  address       = "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+                  Informatik, Rheinau 1, D-56075 Koblenz",
+  url           = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-5-2000/"
+                  ,
+  abstract      = "FTP 2000 is the third in a series of workshops on
+                  First-Order Theorem Proving. Following the successes of the
+                  first workshop (FTP'97) in RISC Linz, Schloss Hagenberg,
+                  Austria, and the second (FTP'98) in Vienna, Austria, this
+                  year's workshop will be held in St Andrews, Scotland, in
+                  conjunction with {\em Tableaux 2000\/}, the major
+                  international conference for automated reasoning with
+                  analytic tableaux and related methods ({\tt
+                  http://i12www.ira.uka.de/TABLEAUX/}). Like the preceding
+                  workshops in this series, FTP 2000 provides a forum for
+                  presentation of recent work and discussion of research in
+                  progress on First-order Theorem Proving as a core theme of
+                  automated deduction. More information about the FTP
+                  workshop series is available from the web page {\tt
+                  http://www.logic.at/FTP/}. \par The technical program of
+                  FTP 2000 consists of three invited talks, 18 regular
+                  papers, and two position papers. The topics of these papers
+                  match very well those of the workshop which cover automated
+                  theorem proving in first-order classical, many-valued, and
+                  modal logics, including nonexclusively: resolution,
+                  equational reasoning, term-rewriting, model construction,
+                  constraint reasoning, unification, propositional logic,
+                  specialized decision procedures; strategies and complexity
+                  of theorem proving procedures; and applications of
+                  first-order theorem provers to problems in verification,
+                  artificial intelligence, and mathematics."
+}
+
+@TechReport{baumgartner:massacci:2:2000,
+  author        = "Peter Baumgartner and Fabio Massacci",
+  title         = "{The Taming of the (X)OR}",
+  institution   = "Universit{\"a}t Koblenz-Landau",
+  year          = "2000",
+  type          = "Fachberichte Informatik",
+  number        = "2--2000",
+  language      = "english",
+  address       = "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+                  Informatik, Rheinau 1, D-56075 Koblenz",
+  url           = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-2-2000.pdf"
+                  ,
+  abstract      = "Many key verification problems such as bounded
+                  model-checking, circuit verification and logical
+                  cryptanalysis are formalized with combined clausal and
+                  affine logic (i.e.\ clauses with xor as the connective) and
+                  cannot be efficiently (if at all) solved by using CNF-only
+                  provers. \par We present a decision procedure to
+                  \emph{efficiently} decide such problems. The Gauss-DPLL
+                  procedure is a tight integration in a unifying framework of
+                  a Gauss-Elimina\-tion procedure (for affine logic) and a
+                  Davis-Putnam-Logeman-Loveland procedure (for usual clause
+                  logic). \par The key idea, which distinguishes our approach
+                  from others, is the full interaction bewteen the two parts
+                  which makes it possible to maximise (deterministic)
+                  simplification rules by passing around newly created unit
+                  or binary clauses in either of these parts. We show the
+                  correcteness and the termination of Gauss-DPLL under very
+                  liberal assumptions."
+}
+
+
+
+@TechReport{	  baumgartner:kuehn:6:99,
+  author	= "Peter Baumgartner and Michael K{\"u}hn",
+  title		= "{Abductive Coreference by Model Construction}",
+  institution	= "Universit{\"a}t Koblenz-Landau",
+  year		= "1999",
+  type		= "Fachberichte Informatik",
+  number	= "6--99",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-6-99.ps.gz"
+		  ,
+  abstract	= "In this paper, we argue that the resolution of anaphoric
+		  expressions in an utterance is essentially an {\em
+		  abductive\/} task following [HSAM93] who use a weighted
+		  abduction scheme on horn clauses to deal with reference. We
+		  give a semantic representation for utterances containing
+		  anaphora that enables us to compute possible antecedents by
+		  abductive inference. We extend the disjunctive model
+		  construction procedure of {\em hyper tableaux\/} [BFN96,
+		  K{\"u}h97] with a clause transformation turning the
+		  abductive task into a model generation problem and show the
+		  completeness of this transformation with respect to the
+		  computation of abuctive explanations. This abductive
+		  inference is applied to the resolution of anaphoric
+		  expressions in our general model constructing framework for
+		  incremental discourse representation [K{\"u}h99] which we
+		  argue to be useful for computing information updates from
+		  natural language utterances [Vel96]."
+}
+
+
+@TechReport{baumgartner:etal:1:99,
+  author        = "Peter Baumgartner and J.D. Horton and Bruce Spencer",
+  title         = "{Merge Path Improvements for Minimal Model Hyper
+                  Tableaux}",
+  institution   = "Universit{\"a}t Koblenz-Landau",
+  year          = "1999",
+  type          = "Fachberichte Informatik",
+  number        = "1--99",
+  language      = "english",
+  address       = "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+                  Informatik, Rheinau 1, D-56075 Koblenz",
+  url           = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-1-99.ps.gz"
+                  ,
+  abstract      = "We combine techniques originally developed for
+                  refutational first-order theorem proving within the clause
+                  tree framework with techniques for minimal model
+                  computation developed within the hyper tableau framework.
+                  This combination generalizes well-known tableaux techniques
+                  like complement splitting and folding-up/down. We argue
+                  that this combination allows for efficiency improvements
+                  over previous, related methods. It is motivated by
+                  application to diagnosis tasks; in particular the problem
+                  of avoiding redundancies in the diagnoses of electrical
+                  circuits with reconvergent fanouts is addressed by the new
+                  technique. In the paper we develop as our main contribution
+                  in a more general way a sound and complete calculus for
+                  propositional circumscriptive reasoning in the presence of
+                  minized and varying predicates."
+}
+
+
+@TechReport{baumgartner:etal:23:98,
+  author        = "Peter Baumgartner and Norbert Eisinger and Ulrich Furbach",
+  title         = "{A Confluent Connection Calculus}",
+  institution   = "Universit{\"a}t Koblenz-Landau",
+  year          = "1998",
+  type          = "Fachberichte Informatik",
+  number        = "23--98",
+  language      = "english",
+  address       = "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+                  Informatik, Rheinau 1, D-56075 Koblenz",
+  url           = "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-23-98.ps.gz"
+                  ,
+  abstract      = "This work is concerned with basic issues of the design of
+                  calculi and proof procedures for first-order connection
+                  methods and tableaux calculi. Proof procedures for these
+                  type of calculi developed so far suffer from not exploiting
+                  proof confluence, and very often unnecessarily rely on a
+                  heavily backtrack oriented control regime. \par As a new
+                  result, we present a variant of a connection calculus and
+                  prove its {\em strong\/} completeness. This enables the
+                  design of backtrack-free control regimes. To demonstrate
+                  that the underlying fairness condition is reasonably
+                  implementable we define an effective search strategy. We
+                  show that with the new approach the search space can be
+                  exponentially smaller than those of current,
+                  backtracking-oriented proof procedures based on {\em
+                  weak\/} completeness results."
+}
+
+
+
+@InProceedings{Baumgartner:Schaefer:ProblemSolvingWS:CADE:98,
+  author = 	 {Peter Baumgartner and Dorothea Sch{\"a}fer},
+  title = 	 {Model Elimination with Simplification and its Application
+		  to Software Verification},
+  booktitle = 	 {CADE-15 Workshop on Problem-solving Methodologies with Automated Deduction},
+  year = 	 {1998},
+  note =          "http://www.uni-koblenz.de/{\textasciitilde}peter/cade-15-ws/",
+  OPTkey = 	 {},
+  editor =	 {Peter Baumgartner and Ulrich Furbach and Michael Kohlhase and William McCune and Wolfgang Reif and Mark Stickel and Tom{\`a}s Uribe}
+}
+
+
+@TechReport{	  Baumgartner:Schaefer:5:98,
+  author	= "Peter Baumgartner and Dorothea Sch{\"a}fer",
+  title		= "{Model Elimination with Simplification and its Application
+		  to Software Verification}",
+  institution	= "Universit{\"a}t Koblenz-Landau",
+  year		= "1998",
+  type		= "Fachberichte Informatik",
+  number	= "5--98",
+  language	= "english",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-5-98.ps.gz"
+		  ,
+  abstract	= " This work is motivated by a coupling of the interactive
+		  software verification system KIV
+		  \cite{Reif:Schellhorn:Stenzel:KIV:CADE:97} with our Model
+		  Elimination prover PROTEIN
+		  \cite{Baumgartner:Furbach:PROTEIN:CADE12:94}. In order to
+		  make this combination efficient, we extend Model
+		  Elimination by a concept of simplification based on
+		  conditional rewrite rules. The extension is defined in such
+		  a way that rewrite rules as given from the KIV system can
+		  easily be accommodated. In the paper, we describe the new
+		  simplification technique, discuss completeness, and
+		  demonstrate with practical practical experiments from the
+		  KIV domain the benefits."
+}
+
+@TechReport{	  baumgartner:32:97,
+  author	= "Peter Baumgartner",
+  title		= "{Hyper Tableaux --- The Next Generation}",
+  institution	= "Universit{\"a}t Koblenz-Landau",
+  year		= "1997",
+  type		= "Fachberichte Informatik",
+  number	= "32--97",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-32-97.ps.gz"
+		  ,
+  abstract	= "``Hyper tableaux'' is a sound and complete calculus for
+		  first-order clausal logic. The present paper introduces an
+		  improvement which removes the major weakness of the
+		  calculus, which is the need to (at least partially) blindly
+		  guess ground-instantiations for certain clauses. This
+		  guessing is now replaced by a unification-driven technique.
+		  \par The calculus is presented in detail, which includes a
+		  completeness proof. Completeness is proven by using a novel
+		  approach to extract a model from an open branch. This
+		  enables semantical redundancy criteria which are not
+		  present in related approaches."
+}
+
+@TechReport{	  baumgartner:23:97,
+  author	= "Peter {Baumgartner~(Hrsg.)}",
+  title		= "{Jahrestreffen der GI-Fachgruppe 1.2.1 `Deduktionssysteme'
+		  --- Kurzfassungen der Vortr{\"a}ge}",
+  institution	= "Universit{\"a}t Koblenz-Landau",
+  year		= "1997",
+  type		= "Fachberichte Informatik",
+  number	= "23--97",
+  language	= "german",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-23-97.ps.gz"
+		  ,
+  abstract	= "Das Jahrestreffen 1997 der GI-Fachgruppe 1.2.1
+		  `Deduktionssysteme' --- besser bekannt als
+		  `Deduktionstreffen' --- fand vom 30.9.\ bis 2.10.\ 1997 in
+		  Schloss Dagstuhl statt. Die Organisation wurde dieses Jahr
+		  von der KI-Gruppe an der Universit{\"a}t Koblenz-Landau
+		  (Leitung Prof.~Furbach) {{\"u}}bernommen."
+}
+
+@TechReport{	  aravindan:baumgartner:10:97,
+  author	= "Chandrabose Aravindan and Peter Baumgartner",
+  title		= "{A Rational and Efficient Algorithm for View Deletion in
+		  Databases}",
+  institution	= "Universit{\"a}t Koblenz-Landau",
+  year		= "1997",
+  type		= "Fachberichte Informatik",
+  number	= "10--97",
+  language	= "english",
+  address	= "Universit{\"a}t Koblenz-Landau, Institut f{\"u}r
+		  Informatik, Rheinau 1, D-56075 Koblenz",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-10-97.ps.gz"
+		  ,
+  abstract	= ""
+}
+
+
+@Misc{Baumgartner:Habil:2002,
+  OPTkey = 	 {},
+  author =	 {Peter Baumgartner},
+  title =	 {{Automatische Deduktion -- Von Kalk{\"u}len zu Anwendungen}},
+  howpublished = {Habilitation thesis, University of Koblenz-Landau, Germany},
+  OPTmonth = 	 {},
+  year =	 {2002},
+  note =	 {(in German)},
+  OPTannote = 	 {}
+}
+
+
+@PhDThesis{	  Baumgartner:TheoryReasoning:PhDThesis:96,
+  author	= "Peter Baumgartner",
+  title		= "{Theory Reasoning in Connection Calculi and the
+		  Linearizing Completion Approach}",
+  school	= unikola,
+  year		= "1996",
+  url		= "http://www.uni-koblenz.de/~peter/thesis.html",
+  optcrossref	= "",
+  optkey	= "",
+  optaddress	= "",
+  optmonth	= "",
+  opttype	= "",
+  abstract	= "This thesis is on extensions of calculi for automated
+		  theorem proving towards theory reasoning. It focuses on
+		  connection methods\index{Connection!Method} and in
+		  particular on theory model elimination (TME). For TME the
+		  emphasis lies on the combination with theory reasoners to
+		  be obtained by new compilation approach. \par Several
+		  theory-reasoning versions of connection calculi are defined
+		  and related to each other. In doing so, TME will be
+		  selected as a base to be developed further. The final
+		  versions are search-space restricted versions of total TME,
+		  partial TME and partial restart TME. These versions all are
+		  {\em answer\/}-complete, thus making TME interesting for
+		  logic programming and problem-solving applications. \par A
+		  theory reasoning system is only operable in combination
+		  with an (efficient) background reasoner for the theories of
+		  interest. Instead of hand-crafting respective background
+		  reasoners, a more general approach --- linearizing
+		  completion --- is proposed. Linearizing completion enables
+		  the {\em automatic\/} construction of background calculi
+		  suitable for TME-based theory reasoning systems from a wide
+		  range of axiomatically given theories, namely Horn
+		  theories. \par Technically, linearizing completion is a
+		  device for combining the unit-resulting strategy of
+		  resolution with a goal-oriented, linear strategy {\`a} la
+		  Prolog in a refutationally complete way. The method is
+		  presented in detail. \par Finally, an implementation
+		  extending the PTTP technique (Prolog based Technology
+		  Theorem Proving) towards theory reasoning is described, and
+		  the usefulness of the methods developed in this text will
+		  be experimentally demonstrated.",
+  optannote	= ""
+}
+
+@TechReport{	  Baumgartner:Furbach:RMERefinements:TechRep:24:96,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Refinements for Restart Model Elimination}",
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  year		= "1996",
+  number	= "24--96",
+  language	= "english",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-24-96.ps.gz"
+		  ,
+  abstract	= " We introduce and discuss a number of refinements for
+		  restart model elimination (RME). Most of these refinements
+		  are motivated by the use of RME as an interpreter for
+		  disjunctive logic programming. Especially head selection
+		  function, computation rule, strictness and independence of
+		  the goal clause are motivated by aiming at a procedural
+		  interpretation of clauses. Other refinements like
+		  regularity and early cancellation pruning are techniques to
+		  handle the tremendous search space. We discuss these
+		  techniques and investigate their compatibility. As a new
+		  result we give a proof of completeness for RME with early
+		  cancellation pruning; we furthermore show that this
+		  powerful refinement is compatibel with regularity tests. "
+}
+
+@TechReport{	  Baumgartner:Furbach:CalculiForDLP:TechRep:13:96,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Calculi for Disjunctive Logic Programming}",
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  year		= "1996",
+  number	= "13--96",
+  language	= "english",
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-13-96.ps.gz"
+		  ,
+  keywords	= "Disjunctive Logic Programming, Fixpoint Semantics, SLO,
+		  Theorem Proving",
+  abstract	= " We introduce a bottom-up and a top-down calculus for
+		  disjunctive logic programming (DLP). The bottom-up
+		  calculus, hyper tableaux, is depicted in its ground version
+		  and its relation to fixed point approaches from the
+		  literature is investigated. The top-down calculus, restart
+		  model elimination (RME), is presented as a sound and
+		  complete answer-computing mechanism for DLPs, and its
+		  relation to hyper tableaux is discussed. \\ In two aspect
+		  this represents an extension of SLD-resolution for Horn
+		  clause logic programming: RME {\em is\/} SLD-resolution
+		  when restricted to Horn clauses, and it has a direct
+		  counterpart to the immediate consequence operator for Horn
+		  clauses. Furthermore we discuss, that hyper tableaux can be
+		  seen as an extension of SLO-resolution."
+}
+
+@Misc{		  Baumgartner:Furbach:HyperTableaux:Dagstuhl:96,
+  optcrossref	= "",
+  optkey	= "",
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Hyper Tableaux. Part I: Proof Procedure and Model
+		  Generation}",
+  howpublished	= "Dagstuhl-Seminar Reports {\em Disjunctive logic
+		  programming and databases: Non-monotonic aspects\/}",
+  year		= "1996",
+  optmonth	= "",
+  optnote	= "",
+  optannote	= ""
+}
+
+@InCollection{	  Baumgartner:Furbach:HyperTableauxAndDLP:DDLP:96,
+  author	= "Peter Baumgartner and Ulrich Furbach",
+  title		= "{Hyper Tableaux and Disjunctive Logic Programming}",
+  booktitle	= "ICLP 96 Workshop on Deductive Databases and Logic
+		  Programming",
+  howpublished	= "Workshop Deductive Databases and Logic Programming
+		  (DD\&LP'96) at {\em Joint International Conference and
+		  Symposium on Logic Programming\/}",
+  year		= "1996",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/fix-jicslp96.ps.gz"
+		  ,
+  publisher	= "GMD",
+  opteditor	= "",
+  volume	= "295",
+  optnumber	= "",
+  series	= "GMD Studien",
+  abstract	= " We introduce a bottom-up and a top-down calculus for
+		  disjunctive logic programming (DLP). The bottom-up
+		  calculus, hyper tableaux, is depicted in its ground version
+		  and its relation to fixed point approaches from the
+		  literature is investigated. The top-down calculus, restart
+		  model elimination (RME), is presented as a sound and
+		  complete answer-computing mechanism for DLPs, and its
+		  relation to hyper tableaux is discussed. \\ In two aspect
+		  this represents an extension of SLD-resolution for Horn
+		  clause logic programming: RME {\em is\/} SLD-resolution
+		  when restricted to Horn clauses, and it has a direct
+		  counterpart to the immediate consequence operator for Horn
+		  clauses. Furthermore we discuss, that hyper tableaux can be
+		  seen as an extension of SLO-resolution."
+}
+
+@Misc{		  AIGROUP:MergingTPandLP:Poster:JICSLP:96,
+  optcrossref	= "",
+  optkey	= "",
+  author	= "Artificial Intelligence Research Group",
+  title		= "{Towards Merging Theorem Proving and Logic Programming
+		  Paradigms}",
+  howpublished	= "Proc. of the Poster Session at JICSLP '96, Editors: N.
+		  Fuchs and U. Geske",
+  year		= "1996",
+  optmonth	= "",
+  note		= "GMD Studien Nr. 296",
+  optannote	= ""
+}
+
+@InProceedings{	  Baumgartner:Kuehn:Beckert:EHyperTableaux:DeduktionWS:96,
+  author	= "Peter Baumgartner and Bernhard Beckert and Michael
+		  K{\"u}hn",
+  title		= "{Extending Hyper Tableaux with Rigid $E$-Unification}",
+  editor	= "K. Prasser",
+  number	= "WV-96-09",
+  series	= "Internal Reports",
+  booktitle	= "Workshop Deduktion, 20.\ Jahrestagung f{\"u}r
+		  k{\"u}nstliche Intelligenz, Zusammenfassungen",
+  year		= 1996,
+  organization	= "Technische Universit{\"a}t Dresden",
+  address	= "Fakult{\"a}t Informatik, D01062 Dresden",
+  url		= "http://www.uni-koblenz.de/~peter/Publications/tableaux-dedtreff96.ps.gz"
+		  ,
+  abstract	= "In \cite{Baumgartner:etal:HyperTableau:JELIA:96} we
+		  introduced a variant of clausal normal form tableaux called
+		  ``hyper tab\-leaux''. In the talk we well report about
+		  ongoing work on two improvements of the basic calculus. The
+		  first improvement deals with a shortcoming of the basic
+		  calculus, which is the need for ``purifying'' substitutions
+		  in disjunctions of positive literals. The second
+		  improvement is the extension with a dedicated inference
+		  rule for equality. We will use the completion-based method
+		  for mixed universal and rigid
+		  $E$-unification of
+		  \cite{Beckert:MixedUnification:94}. "
+}
+
+@TechReport{	  Baumgartner:etal:TableauxDiagnosis:TechRep:23:96,
+  author	= "Peter Baumgartner and Peter Fr{\"o}hlich and Ulrich
+		  Furbach and Wolfgang Nejdl",
+  title		= "{Tableaux for Diagnosis Applications}",
+  year		= "1996",
+  number	= "23--96",
+  language	= "english",
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-23-96.ps.gz"
+		  ,
+  abstract	= " In [Nejdl and Fr{\"o}hlich 96] a very efficient system
+		  for solving diagnosis tasks has been described, which is
+		  based on belief revision procedures and uses first order
+		  logic system descriptions. In this paper we demonstrate how
+		  such a system can be rigorously formalized from the
+		  viewpoint of deduction by using the calculus of hyper
+		  tableaux [Baumgartner et.al. 96]. The benefits of this
+		  approach are twofold: first, it gives us a clear logical
+		  description of the diagnosis task to be solved; second, as
+		  our experiments show, the approach is feasible in practice
+		  and thus serves as an example of a successful application
+		  of deduction techniques to real-world applications."
+}
+
+@Misc{		  Baumgartner:Furbach:Stolzenburg:95b,
+  author	= {Peter Baumgartner and Ulrich Furbach and Frieder
+		  Stolzenburg},
+  title		= {{Computing Answers and Logic Programming by Model
+		  Elimination Based Theorem Proving}},
+  year		= {1995},
+  howpublished	= {Proc. of the Workshop ``Automated Reasoning: Bridging the
+		  Gap between Theory and Practice''},
+  note		= {Leeds, England},
+  optannote	= { }
+}
+
+@TechReport{	  Baumgartner:Schumann:RMESETHEO:TechRep:5:95,
+  author	= {Peter Baumgartner and Johann Schumann},
+  title		= {{Implementing Restart Model Elimination and Theory Model
+		  Elimination on top of SETHEO}},
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  url		= "http://www.uni-koblenz.de/~peter/Publications/theory-setheo.ps.gz"
+		  ,
+  year		= {1995},
+  number	= {5--95},
+  abstract	= {This paper presents an implementation for the efficient
+		  execution of Theory Model Elimination (TME), TME by
+		  Linearizing Completion, and Restart Model Elimination (RME)
+		  on top of the automated theorem prover {\small SETHEO}.
+		  These calculi allow for theory reasoning using a Model
+		  Elimination based theorem prover. They are described in
+		  detail and their major properties are shown. Then, a
+		  detailed description how TME by Linearizing Completion and
+		  RME can be implemented on top of {\small SETHEO}'s Abstract
+		  Machine (SAM) is given. Due to the flexibility of the
+		  Abstract Machine and its input language LOP, only simple
+		  transformations of the input formula are sufficient to
+		  obtain an efficient implementation. Only for RME, one
+		  machine-instruction of the SAM had to be modified slightly.
+		  We present results of experiments comparing plain {\small
+		  SETHEO} with an implementation of TME with PTTP (PROTEIN)
+		  and the {\small SETHEO} implementation presented here.}
+}
+
+@Article{	  Baumgartner:Stolzenburg:DeduktionstreffenBericht:95,
+  author	= "Peter Baumgartner and Frieder Stolzenburg",
+  title		= "{Jahrestreffen der GI-Fachgruppe 1.2.1 Deduktion}",
+  journal	= {KI},
+  year		= 1995,
+  volume	= 9,
+  number	= 6,
+  pages		= {80-81},
+  note		= "Conference report"
+}
+
+@InProceedings{	  Baumgartner:94b,
+  author	= {Peter Baumgartner and J{\"u}rgen Dix and Ulrich Furbach
+		  and Frieder Stolzenburg},
+  title		= {{The Spectrum of Model Elimination based Theorem
+		  Proving}},
+  booktitle	= {Informal Proceedings of the 11th Annual Meeting of the
+		  GI-Fachgruppe Deduktionssysteme},
+  organization	= {TH Darmstadt},
+  year		= {1994},
+  editor	= {W. Bibel, C. Walther},
+  number	= {AIDA-94-06},
+  series	= {Research Report},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:94c,
+  author	= {Peter Baumgartner},
+  title		= {{A Transformation Technique to Combine the Linear and the
+		  Unit-Resulting Restrictions}},
+  booktitle	= {Proceedings of the Eight International Symposium on
+		  Methodologies for Intelligent Systems},
+  organization	= {Oak Ridge National Laboratory},
+  year		= {1994},
+  address	= {Charlotte, N.C, USA},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:Furbach:94c,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{Model Elimination without Contrapositives and its
+		  Application to PTTP}},
+  booktitle	= {TABLEAUX-'94 Workshop},
+  organization	= {Imperial College},
+  year		= {1994},
+  editor	= {Broda D'Agostino Gor{\'e} Johnson Reeves},
+  number	= {TR-94/5},
+  series	= {Technical Report},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:Furbach:94d,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{Lineare Vervollst{\"a}ndigung f{\"u}r die Behandlung von
+		  Horntheorien}},
+  booktitle	= {DFG-Colloquium ``Deduction''},
+  organization	= {Technische Hochschule Darmstadt},
+  year		= {1994},
+  number	= {AIDA-94-02},
+  series	= {Research Report},
+  optannote	= { }
+}
+
+@Misc{		  Baumgartner:Furbach:94e,
+  author	= {Peter Baumgartner and Ulrich Furbach},
+  title		= {{The Spectrum of Model Elimination Based Theorem
+		  Proving}},
+  year		= {1994},
+  howpublished	= {Proc. of the Workshop ``Automated Reasoning: Bridging the
+		  Gap between Theory and Practice''},
+  note		= {Leeds, England},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:Furbach:Stolzenburg:94,
+  author	= {Peter Baumgartner and Ulrich Furbach and Frieder
+		  Stolzenburg},
+  title		= {{Applications of Theory Reasoning in Model Elimination}},
+  booktitle	= {Theory Reasoning in Automated Deduction},
+  year		= {1994},
+  editor	= {Peter Baumgartner and H.-J. B{\"u}rckert and H. Comon and
+		  Ulrich Furbach and Mark Stickel},
+  series	= {CADE-12 Workshop Proceedings},
+  optannote	= { }
+}
+
+@Proceedings{	  Baumgartner:etal:94,
+  title		= {{Theory Reasoning in Automated Deduction}},
+  organization	= {INRIA, Lorraine},
+  year		= {1994},
+  editor	= {Peter Baumgartner, H.-J. B{\"u}rckert and H. Comon},
+  note		= {Technical Report},
+  series	= {12th International Conference on Automated Deduction,
+		  Workshop},
+  optannote	= { }
+}
+
+@TechReport{	  Stolzenburg:Baumgartner:CME:TechRep:10:94,
+  author	= {Frieder Stolzenburg and Peter Baumgartner},
+  title		= {{Constraint Model Elimination and a PTTP-Implementation}},
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  url		= "http://www.uni-koblenz.de/fb4/publikationen/gelbereihe/RR-10-94.ps.gz"
+		  ,
+  year		= "1994",
+  number	= "10/94",
+  abstract	= "In constraint logic programming, proof procedures for {\em
+		  Horn\/} clauses are enhanced with an interface to efficient
+		  constraint solvers. The question arises whether it is
+		  possible to incorporate constraint processing into general,
+		  non-Horn theorem proving calculi. In this paper, a positive
+		  answer to this question will be given. A framework for a
+		  new calculus is introduced which combines model elimination
+		  with constraint solving, following the lines of
+		  B{\"u}rckert (1991). A prototype system has been
+		  implemented rapidly by only combining a PROLOG technology
+		  implementation of model elimination and PROLOG with
+		  constraints. Some example studies, e.g. taxonomic
+		  reasoning, show the advantages and some problems with this
+		  procedure. "
+}
+
+@InProceedings{	  Stolzenburg:Baumgartner:94b,
+  author	= {Frieder Stolzenburg and Peter Baumgartner},
+  title		= {{Constraint Model Elimination and a PTTP-Implementation}},
+  booktitle	= {Workshop on Constraint Languages and their Use in Problem
+		  Modelling --- International Logic Programming Symposium},
+  year		= {1994},
+  editor	= {J. Jourdan, P. Lim, R. Yap},
+  optannote	= { }
+}
+
+@TechReport{	  Baumgartner:93a,
+  author	= {Peter Baumgartner},
+  title		= {{Refinements of Theory Model Elimination and a Variant
+		  without Contrapositives}},
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  year		= {1993},
+  number	= {8/93},
+  OPTnote		= {(Short version in {\em Proc. ECAI 94, 1994, Wiley\/})}
+}
+
+@TechReport{	  Baumgartner:TPTPWorkshop:7:93,
+  author	= "Peter Baumgartner\quad(Editor)",
+  title		= "{Workshop PTTP-basiertes Theorembeweisen}",
+  year		= "1993",
+  number	= "7--93",
+  language	= "german",
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress
+}
+
+@InProceedings{	  Baumgartner:93c,
+  author	= {Peter Baumgartner},
+  title		= {{Combining Model Elimination and Unit-Resulting
+		  Resolution}},
+  booktitle	= {Proc. Tableau-Workshop},
+  year		= {1993},
+  address	= {Marseille},
+  note		= {MPI-Report I-93-213},
+  optpublisher	= {Max Planck Institute for Computer Science}
+}
+
+@InProceedings{	  Baumgartner:92d,
+  author	= {Peter Baumgartner},
+  title		= {{A Model Elimination Calculus with Built-In Theories}},
+  booktitle	= {Theorem Proving with Analytic Tableaux and Related
+		  Methods},
+  year		= {1992},
+  editor	= {{Fronh{\"o}fer, H{\"a}hnle, K{\"a}ufl}},
+  number	= {8/92},
+  series	= {Technical Report},
+  optannote	= { }
+}
+
+@InProceedings{	  Baumgartner:92b,
+  author	= {Peter Baumgartner},
+  title		= {{Partial Unification for Ordered Theory Resolution}},
+  booktitle	= {6th International Workshop on Unification},
+  organization	= {IBFI Dagstuhl},
+  year		= {1992},
+  editor	= {F. Baader and J. Siekmann and W. Snyder},
+  note		= {Dagstuhl Seminar Report 42}
+}
+
+@InProceedings{	  Baumgartner:Furbach:92a,
+  author	= {Peter Baumgartner},
+  title		= {{Consolution as a Framework for Comparing Calculi}},
+  booktitle	= {Theorem Proving with Analytic Tableaux and Related
+		  Methods},
+  year		= {1992},
+  editor	= {{Fronh{\"o}fer, H{\"a}hnle, K{\"a}ufl}},
+  number	= {8/92},
+  series	= {Technical Report},
+  optannote	= { }
+}
+
+@TechReport{	  Baumgartner:Furbach:Petermann:UnifiedApproachTheoryReasoning:TechRep:15:92,
+  author	= {Peter Baumgartner and Ulrich Furbach and Uwe Petermann},
+  title		= {{A Unified Approach to Theory Reasoning}},
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  year		= {1992},
+  url		= "http://www.uni-koblenz.de/~peter/Publications/thover.ps.gz"
+		  ,
+  abstract	= "{\em Theory reasoning} is a kind of two-level reasoning in
+		  automated theorem proving, where the knowledge of a given
+		  domain or theory is separated and treated by special
+		  purpose inference rules. We define a classification for the
+		  various approaches for theory reasoning which is based on
+		  the syntactic concepts of {\em literal level --- term level
+		  --- variable level\/}. The main part is a review of theory
+		  extensions of common calculi (resolution, model elimination
+		  and a connection method). In order to see the relationships
+		  among these calculi, we define a super-calculus called {\em
+		  theory consolution\/}. Completeness of the various theory
+		  calculi is proven. Finally, due to its relevance in
+		  automated reasoning, we describe current ways of equality
+		  handling.",
+  number	= "15/92"
+}
+
+@TechReport{	  Baumgartner:90a,
+  author	= {Peter Baumgartner},
+  title		= {{Modelling Software Reuse with Predicate Logic}},
+  institution	= unikola,
+  type		= fbinformatik,
+  address	= unikolaaddress,
+  year		= {1990},
+  number	= {12/90}
+}
+
+@TechReport{	  Baumgartner:etal:90,
+  author	= {Peter Baumgartner and S. Meggendorfer and Z. Qiu},
+  title		= {{Software Specification Methods from the Viewpoint of
+		  Reusability}},
+  institution	= {Technische Universit{\"a}t M{\"u}nchen},
+  year		= {1990},
+  month		= {July},
+  number	= {FKI--133--90},
+  type		= {AI research report},
+  optnote	= { }
+}
+
+@MastersThesis{	  Baumgartner:88,
+  author	= {Peter Baumgartner},
+  title		= {{Theorie und Implementierung eines kombinierten logischen und funktionalen Programmiersystems}},
+  year		= {1988},
+  school	= {{Technische Universit{\"a}t M{\"u}nchen}},
+  note		= {(In German)},
+  optannote	= { }
+}
+
+
+@Proceedings{	  TABLEAUX:95,
+  booktitle	= {Theorem Proving with Analytic Tableaux and Related
+		  Methods},
+  title		= {Theorem Proving with Analytic Tableaux and Related
+		  Methods},
+  year		= {1995},
+  editor	= {Peter Baumgartner and Reiner H{\"a}hnle and J. Posegga},
+  publisher	= {Springer},
+  volume	= {918},
+  series	= lnai
+}
+
+@Proceedings{	  TABLEAUX:97,
+  booktitle	= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  title		= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  year		= {1997},
+  editor	= {Didier Galmiche},
+  publisher	= {Springer},
+  volume	= {1227},
+  series	= lnai,
+  optannote	= { }
+}
+
+@Proceedings{	  TABLEAUX:98,
+  booktitle	= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  title		= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  year		= {1998},
+  editor	= {Harry de Swaart},
+  publisher	= {Springer},
+  volume =	 {1397},
+  series	= lnai,
+  optannote	= { }
+}
+
+@Proceedings{	  TABLEAUX:99,
+  booktitle	= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  title		= {Automated Reasoning with Analytic Tableaux and Related
+		  Methods},
+  year		= {1999},
+  editor	= {Neil Murray},
+  publisher	= {Springer},
+  volume =	 {1617},
+  series	= lnai
+}
+
+@proceedings{TABLEAUX:2002,
+  editor    = {Uwe Egly and
+               Christian G. Ferm{\"u}ller},
+  title     = {Automated Reasoning with Analytic Tableaux and Related Methods,
+               International Conference, TABLEAUX 2002, Copenhagen, Denmark,
+               July 30 - August 1, 2002, Proceedings},
+  booktitle = {TABLEAUX},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {2381},
+  year      = {2002},
+  isbn      = {3-540-43929-3},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@Proceedings{	  IJCAI:95,
+  booktitle	= {14th International Joint Conference on Artificial
+		  Intelligence (IJCAI 95)},
+  year		= "1997",
+  publisher	= {Morgan Kaufmann},
+  address	= "Montreal"
+}
+
+@Proceedings{	  IJCAI:97,
+  booktitle	= {15th International Joint Conference on Artificial
+		  Intelligence (IJCAI 97)},
+  editor        = {M. E. Pollack},
+  year		= "1997",
+  publisher	= {Morgan Kaufmann},
+  address	= "Nagoya"
+}
+
+@Proceedings{CADE:99,
+  booktitle =   {CADE-16 -- The 16th International 
+                  Conference on Automated Deduction},
+  editor =      {Harald Ganzinger},
+  year =        {1999},
+  volume = {1632},
+  series =      {Lecture Notes in Artificial Intelligence},
+  publisher =   {Springer},
+  title=        {Automated Deduction -- CADE-16},
+  address =     {Trento, Italy}
+}
+		  
+@Proceedings{CADE:00,
+  booktitle =   {CADE-17 -- The 17th International 
+                  Conference on Automated Deduction},
+  editor =      {David McAllester},
+  year =        {2000},
+  volume = {1831},
+  series =      {Lecture Notes in Artificial Intelligence},
+  publisher =   {Springer},
+  title=        {Automated Deduction -- CADE-17}
+}
+
+
+@Proceedings{CADE:03,
+  booktitle =   {CADE-19 -- The 19th International 
+                  Conference on Automated Deduction},
+  editor =      {Franz Baader},
+  year =        {2003},
+  volume =	 {2741},
+  series =      {Lecture Notes in Artificial Intelligence},
+  publisher =   {Springer},
+  title=        {Automated Deduction -- CADE-19}
+}
+
+
+@Proceedings{Baumgartner:Zhang:FirstOrderTheoremProving:JSC:01,
+  title = 	 {First-Order Theorem Proving},
+  year = 	 {2003},
+  OPTkey = 	 {},
+  editor =	 {Peter Baumgartner and Hantao Zhang},
+  volume =	 {36},
+  number =	 {1-2},
+  series =	 {Special issue of the Journal of Symbolic Computation},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  publisher =	 {Academic Press},
+  OPTannote = 	 {}
+}
+
+@Proceedings{CL2000:00,
+  booktitle =   {Computational Logic -- CL 2000},
+  editor =      {John Lloyd and Veronica Dahl and Ulrich Furbach and Manfred Kerber and Kung-Kiu Lau and Catuscia Palamidessi and Luis Moniz Pereira and Yehoshua Sagiv and Peter J. Stuckey},
+  year =        {2000},
+  volume =	 {1861},
+  series =      {Lecture Notes in Artificial Intelligence},
+  publisher =   {Springer},
+  title=        {Computational Logic -- CL 2000}
+}
+
+
+@Proceedings{Baumgartner:etal:ModelComputation:WS:CADE:00,
+  title = 	 {CADE-17 Workshop on Model Computation - Principles, Algorithms, Applications},
+  booktitle = 	 {CADE-17 Workshop on Model Computation - Principles, Algorithms, Applications},
+  year = 	 {2000},
+  note =          "http://www.uni-koblenz.de/{\textasciitilde}peter/CADE17-WS-MODELS/",
+  url  =          "http://www.uni-koblenz.de/~peter/CADE17-WS-MODELS/",
+  editor =	 {Peter Baumgartner and Chris Ferm{\"u}ller and Nicolas Peltier and Hantao Zhang},
+}
+
+@Proceedings{Baumgartner:etal:ProblemSolvingMethodologies:WS:CADE:98,
+  title = 	 {CADE-15 Workshop on Problem-solving Methodologies with Automated Deduction},
+  booktitle = 	 {CADE-15 Workshop on Problem-solving Methodologies with Automated Deduction},
+  year = 	 {1998},
+  note =          "http://www.uni-koblenz.de/{\textasciitilde}peter/cade-15-ws/",
+  OPTkey = 	 {},
+  editor =	 {Peter Baumgartner and Ulrich Furbach and Michael Kohlhase and William McCune and Wolfgang Reif and Mark Stickel and Tom{\`a}s Uribe},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@Proceedings{ILPS:97,
+  booktitle =   {Logic Programming - Proceedings of the 1997 International Symposium},
+  editor =      {Jan Maluszynski},
+  year =        {1997},
+  publisher =   {The MIT Press},
+  title=        {Logic Programming - Proceedings of the 1997 International Symposium},
+  address =     {Port Jefferson, New York}
+}                              
+
+
+
+@Proceedings{Bibel:Schmitt:DFGBook:98,
+  title		= "Automated Deduction. A basis for applications",
+  booktitle = 	 "Automated Deduction.  A Basis for Applications",
+  year = 	 "1998",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  editor =	 "Wolfgang Bibel and  Peter H. Schmitt",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  publisher =	 "Kluwer Academic Publishers",
+  OPTorganization = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+		  

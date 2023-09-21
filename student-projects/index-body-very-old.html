@@ -1,0 +1,187 @@
+<h2>Student project offers</h2>
+
+<p>The projects listed below are also offered 
+throughthe <a href="http://cecs.anu.edu.au/projects">ANU/CECS Student
+Research Project</a>, see "Logic and Computation" there.
+
+
+<h3>Areas of interest</h3>
+<p>My area is <em>automated deduction (AD)</em>. AD is concerned with
+push-button technology for logical reasoning on computer. AD systems
+take as input a formula of a formal (mathematical) logical language,
+such as propositional or first-order predicate logic, and apply
+inference rules of a logical calculus to analyse the formula for its
+properties
+(see <a href="http://plato.stanford.edu/entries/reasoning-automated/">
+here</a> for an overview of the area, and 
+ <a href="http://www.math.niu.edu/~rusin/known-math/index/03-XX.html">here</a>
+for mathematical logic more in general). Typically,
+one is interested in determining whether the
+formula is valid ("always true"), satisfiable ("sometimes true"),
+under what conditions it is valid, whether it is valid in a fixed
+interpretation ("model checking"), among others.
+
+<p>Research in AD is highly specialized. My specific research interest
+is the design of AD systems for first-order predicate logic and
+applying them to solve real-world problems. I am interested in any
+application area, such as program development and verification,
+knowledge representation, in particular ontological reasoning, and,
+more recently, business rules and process model analysis.
+See my <A HREF="../slides">slides</a>, 
+<A HREF="../publications">publications</a> and
+<a href="../teaching">teaching</a> pages for more details.
+
+<p>I welcome students to work with me on (mostly) every topic that
+fits in the above description. Below I describe possible projects,
+which can be carried out towards a honors degree, a masters degreee, a
+Ph.D. degree, a Summer Internship or a project in the Erasmus Mundus
+EMCL program, as indicated. Concrete projects for Summer Research
+Scholar Projects are listed also on
+<a href="http://cecs.anu.edu.au/projects/summer/">this 
+page</a>, see <em>Logic and Computation</em> there.
+
+<h3>Logical analysis of business rules</h3>
+<p>Business Rules are widely used in industry to specify the conditions
+or constraints that control the operations of a business. For
+instance, business rules might reflect legislation governing visa
+regulations, or conditions under which social benefits are granted. 
+
+<p>In the project we work with <a href="http://en.wikipedia.org/wiki/Semantics_of_Business_Vocabulary_and_Business_Rules">SBVR</a>,
+which, essentially, is a controlled natural (English) language with formal
+logic semantics in mind. A substantial body of business rules
+from a real-world application has already been developed, which guides
+the developments in the project.
+
+<p>The overall goal is to develop automated reasoning support for SBVR
+and apply it to analyze rule sets, such as the one mentioned above, to
+spot problems such as redundancies and inconsistencies.  Spotting such
+problems is of importance in the development phase of business rules
+to increase one's confidence in the correctness of the rules. Given
+that SBVR is a very expressive language and practically no automated
+reasoning support has been developed so far, this is a
+(scientifically) challenging task.
+
+<p>Concrete topics, roughly in increasing level of difficulty:
+<ul>
+<li>Basic infrastructure for SBVR: parsing into a structured
+representation, conformance checking with a predefined "vocabulary"
+(Honours and internships).
+<li>Experimenting with available theorem provers and constraint
+solving technology (G12) on SBVR rule sets (up to Masters level).
+<li>Designing and implementing specialized calculi for SBVR (Masters
+and Ph.D. level).
+<li>Investigations into semantics of SBVR and complexity of reasoning
+(Ph.D. level).
+  </ul>
+
+<p>
+<b>Requirements.</b>
+Depending on the topic chosen, but good programming skills in
+e.g. Java are required, and some background in mathematical logic
+would be useful.
+
+<p>
+<b>Student's gain.</b>
+<ul>
+<li>Becoming acquainted with business rules and automated reasoning
+techniques 
+<li>Involvement in leading-edge applied research in the intersection of these areas
+</ul>
+
+<h3>Extending the first-order theorem prover SPASS with a new split rule</h3>
+<p>
+<a href="http://www.spass-prover.org/">SPASS</a> is a theorem prover
+for first-order logic with equality. In a 
+<a href="http://users.cecs.anu.edu.au/~baumgart/publications/MESUP-report.pdf">recent
+paper</a> we have shown how its theoretical foundation, the
+superposition calculus, can be integrated with a first-order logic
+version of the so-called Davis-Putnam-Logeman-Loveland procedure. 
+
+<p>The topic of the project is to implement this integration within
+the SPASS prover (internship, honours or Masters level).
+
+<p>
+<b>Requirements.</b>
+Good programming skills in C, basic understanding of logic.
+
+<p>
+<b>Student's gain.</b>
+<li>Becoming acquainted with implementation of automated reasoning
+systems.
+
+<h3>Partially automating an interactively found proof</h3>
+<p>
+This is about proving security properties of a certain computer
+terminal switch developed in the 
+<a href="http://ertos.nicta.com.au/">ERTOS</a> project.
+A formal proof has already been found in a semi-automatical way using
+the Isabelle proof assistant. It is not very long. The challenge is to
+<em>automatize</em> parts of this proof using first-order theorem
+provers (internship, honours or Masters level).
+
+<p>
+<b>Requirements.</b>
+Basic understanding of logic.
+
+<p>
+<b>Student's gain.</b>
+<li>Becoming acquainted with application of automated reasoning
+systems.
+
+<h3>Instance-based methods</h3> 
+Instance-based methods (IBMs) are a
+family of methods for first-order logic theorem proving. IBMs share
+the principle of carrying out proof search by maintaining a set of
+instances of input formulas and analyzing it for satisfiability until
+completion. IBMs are conceptually essentially different to other, more
+mainstream, methods like resolution or free-variable analytic
+tableaux. Also, IBMs exhibit a search space and termination behaviour
+(in the satisfiable case) different from those methods, which makes
+them attractive from a practical point of view as a complementary
+method. For instance, IBMs are decision procedures for function-free
+clause sets and thus capture the complexity class NEXPTIME.
+My main interest here is advancing one such IBM, the so-called Model
+Evolution calculus.
+A brief overview paper is <a href="http://users.cecs.anu.edu.au/~baumgart/publications/IMoverview.pdf">here</a>.
+
+<p>Some specific topics:
+  <ul>
+    <li>Simple implementation of a Model Evolution based prover in
+    Scala. While there is a high-performance implementation already
+    available,
+    the <a href="http://combination.cs.uiowa.edu/Darwin/">Darwin
+    prover</a> we also need a "simple" implementation that can be used
+    as a test-bed to try out new ideas (advanced honors or internship,
+    or Masters level).
+
+    <li>Extending Model Evolution by building-in theories. 
+      First-order theorem provers are often utterly bad when it comes
+      to reasoning with specific theories, in particular arithmetic.
+      Some initial ideas have already been developed, but there is
+      ample opportunity for improvement (advanced Masters or Ph.D. level).
+
+     <li>While IBMs are quite competitive to detect unsatisfiability
+     of the input formula, they are generally bad at detecting
+     satisfiability. The challenge is to strengthen Model Evolution so
+     that it can detect satisfiability more often
+       (advanced Masters or Ph.D. level).
+
+     <li>Many practically interesting problem classes are
+     NEXPTIME-complete (complete for nondeterministic exponential
+     time), like for instance satisfiability of SHOIQ knowledge bases
+     (SHOIQ is a very important logical language used for the Semantic
+     Web), first-order model expansion (a certain kind of constraint
+     satisfaction problems), satisfiability of formulas of the
+     so-called Ackermann-Class with equality, Satisfiability of DQBF
+     (Dependancy Quantified Boolean Formulas), First-Order logic with
+     two variables and counting quantifiers, and more.
+
+       The challenge here is to find interesting practically useful
+       reductions of these problems into so-called function-free clause
+       logic, for which IBMs are "natively" decision procedures, i.e. are
+       guaranteed to terminate (Ph.D. level).
+  </ul>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,503 @@
+
+Yarralumla						       31/03/2006
+==========						Peter Baumgartner 
+					   Peter.Baumgartner@nicta.com.au
+					http://rsise.anu.edu.au/~baumgart/
+
+Yarralumla is an acronym for 
+
+ Yet Another Range Restriction Avoiding Loops Under Much Less Assumptions
+
+Yarralumla is also a beautiful suburb in Canberra, ACT, Australia;
+see http://en.wikipedia.org/wiki/Yarralumla%2C_Australian_Capital_Territory
+
+In case of questions or suggestions please contact Peter Baumgartner.
+Any feedback will be appreciated.
+
+
+General
+=======
+
+Yarralumla (the program) implements various transformations on clause  
+logic formulas for the purpose of applying first-order bottom-up model
+generation (BUMG) systems. The transformations are thought to be useful to
+compute (finite) models, not to find refutations. 
+
+See the paper 'Improved Bottom-Up Model Generation' by Peter
+Baumgartner and Renate Schmidt (U Manchester, England), available at
+http://users.rsise.anu.edu.au/~baumgart/publications/ ,
+for a description of the transformations and the theory behind.
+
+For meaningful operation one needs at the back-end a BUMG system. 
+We experimented with two systems, 
+KRHyper ( http://www.uni-koblenz.de/~wernhard/krhyper/ )
+and
+MSPASS ( http://www.cs.man.ac.uk/~schmidt/mspass/ )
+
+An important difference between these systems is that MSPASS includes
+inference rules for equality reasoning, which are essential to have
+the blocking option of yarralumla the desired effect. KRHyper does not
+have such inference rules. 
+
+KRHyper is available for download on the web site mentioned
+above. Regarding obtaining (a slightly modified, as is needed) version
+of MSPASS please contact Peter Baumgartner.
+
+
+System Requirements
+===================
+
+yarralumla is implemented in SWI Prolog ( http://www.swi-prolog.org/
+). It uses global variables (in an inessential way) and therefore 
+requires a reasonably recent version of SWI Prolog supporting
+that. Version 5.6.3 works fine for us.
+
+Usual UNIX tools are expected to be in place.
+
+Yarralumla has been tested on Linux and Mac OS X.
+
+
+Installation
+============
+
+In the prolog programs the file system paths need to be adjusted. It
+should be obvious what has to be done.
+
+Perhaps also some paths will have to be set explicitly in the shell
+scripts. 
+
+Sorry, no 'configure' script is available.
+
+
+Usage
+=====
+
+Input language
+--------------
+
+The input language is 'extended Prolog notation'. What this means,
+relative to Prolog: 
+
+- The head of a rule may be a disjunction of positive literals. 
+  The head literals are separated by ';', as in
+
+  p(X) ; q(X) :- r(X).
+
+  or
+
+  p(X) ; q(X).
+
+
+- empty heads are not OK, use
+  false :- r(X)
+  instead.
+
+- no default negation (of course, it's classical first-order logic)
+
+Input files should have the suffix .tme
+
+See chapter-book.tme for a sample input file
+
+Programs included
+-----------------
+
+This distribution is comprised of some scripts plus the yarralumla
+program, proper. The scripts are, in a top-down calling hierarchy:
+
+- MSPASS-yarralumla-run and krhyper-yarralumla-run
+
+  These scripts are the actual workhoses to be called from the command
+  line. 
+
+  usage: MSPASS-yarralumla-run [-q] [-splitting] [-fl] [-sh] [-sep] [-bl] FILE[.tme]
+       -q: quiet (less output during search from MSPASS)
+       -splitting: switch on splitting for MSPASS (-bl emplies -splitting)
+       -fl: flattening on
+       -sh: shifting on
+       -sep: separation on
+       -bl: blocking on
+       -h: help (this text)
+
+  Notice that the options to MSPASS-yarralumla-run are much simpler
+  than those of yarralumla.pl .
+
+  MSPASS-yarralumla-run assembles a suitable set of 'fine-grained' options
+  for yarralumla.pl (and MSPASS), depending on the  options given to
+  it. MSPASS-yarralumla-run also calls a conversion script to convert
+  tme files to DFG files, as needed by MSPASS.
+
+  The script krhyper-yarralumla-run is similar but invokes KRHyper
+  instead of MSPASS. (And no conversion script needs to be called.)
+
+  For both scripts, if the prover terminates normally and without
+  having found a refutation then this means that the original clause
+  set is satisfiable (in a finite model). From the result of the
+  computation a model can be read off.
+
+  For instance,
+
+  $ MSPASS-yarralumla-run -bl chapter-book           
+  yarralumla.pl  --flattening none --separation none --blocking true --shifting false ./chapter-book.tme ...
+  Reading ./chapter-book.tme ...
+  4 clauses.
+  Writing ./chapter-book-yarr.tme ...
+  Done.
+  tme2dfg.pl ./chapter-book-yarr.tme ...
+  Reading ./chapter-book-yarr.tme ...
+  14 clauses.
+  Writing ./chapter-book-yarr.dfg ...
+  Done.
+
+  : 
+  :
+
+  SPASS beiseite: Completion found.
+
+
+- tme2dfg.pl 
+  Usage: tme2dfg.pl File[.tme]
+  Takes a tme-file and converts it to a file in DFG syntax.
+  Needed by MSPASS-yarralumla-run.
+
+- krh-run
+
+  A front-end to KRHyper, intended to make life a little easier for
+  invoking KRHyper and providing some extra functionality.
+
+  usage: krh-run [-e] [-h] [-p] [-u] [-v] [-w N] FILE[.tme]
+       krh-run [-e] [-h] [-p] [-u] [-v] [-w N] -i FILE
+       -e: print extent (prints model after run)
+       -h: help (this text)
+       -p: add transformation for possible model semantics
+       -u: add transformation for unstratified negation
+       -v: verbose
+       -w N: set max weight to N
+       -i: concatenate all files listed in FILE to FILE.tme,
+           and use FILE.tme as input then
+
+- yarralumla.pl 
+
+Obviously, this is the central program here.
+
+Usage: yarralumla.pl [Option...] File[.tme]
+Options:
+  --flattening none|standard|separation
+  --flatteningextractconstants true|false
+  --flattenhead true|false
+  --flattentoplevel true|false
+  --flattenequations true|false
+  --shifting false|true
+  --rangerestriction true|false
+  --separation none|nonequations|full
+  --blocking false|true
+Output will be written to FILE-yarr.tme
+
+The transformations 
+
+	flattening* - shifting - rangerestriction/separation - blocking
+
+if in effect, are applied in that order. 
+
+Note: it does not make much sense to switch on blocking without 
+rangerestrictions. 
+
+
+The options mean:
+
+  --flattening 
+
+	none (default): no flattening at all. 
+	If range restriction is on, then clauses like
+
+	dom(X1) :- dom(f(X1,...,Xn)).
+	  :
+	dom(Xn) :- dom(f(X1,...,Xn)).
+
+	are added, in order to insert with each term all proper subterms
+	into the domain.
+
+	standard: nested occurences of proper function terms
+	are removed by the usual extraction.
+
+	separation: extracted subterms are separated away. 
+
+	Example: the clause
+	p(a).
+	becomes (--flattentoplevel true assumed)
+	p(A) :- 
+	    head_def_4(A).
+        head_def_4(A) :- 
+	    a = A.
+	Rationale: avoids long clause bodies, but mainly intended to be
+	useful in conjunction with sorting 
+	(which isn't currently implemented). 
+
+  --flatteningextractconstants 
+
+	Whether constants are extracted (abstracted away into equations) 
+	or not.
+
+	true (default): yes
+	false: no
+
+  --flattenhead 
+
+	Whether the head of a clause is flattened or not.
+
+	true (default): yes
+	false: no
+
+  --flattentoplevel 
+
+	Whether the terms at top-level position of non-equations are 
+	extracted or not. Is only in effect when the flattening options 
+	is not 'none'. 
+
+	false (default): top-level terms are not extracted. 
+	Predicate substitution axioms are added to preserve completeness.
+	
+	true: top-level terms are not extracted
+
+	Example: the clause 
+	p(f(a)).
+
+	With option 'false' the clause becomes
+
+	p(f(A)) :- 
+	    a = A.
+	dom(f(A)) :- 
+	    a = A.
+	p(A) :- 
+	    p(B),
+	    B = A.
+
+	With option 'true' the clause becomes
+
+	p(A) :- 
+	    f(B) = A,
+	    a = B.
+	dom(f(A)) :- 
+	    dom(A).
+
+	(And Model Generation will not terminate!)
+
+  --flattenequations 
+
+	Whether equations are flattened or not.
+
+	true (default): yes
+	false: no
+
+There are too many flattening suboptions to remember what they're good
+for. The wrapper scripts 
+MSPASS-yarralumla-run and krhyper-yarralumla-run 
+mentioned above assemble useful combinations of flags for the
+yarralumla run, proper.
+
+ --shifting 
+
+    	Whether body atoms containing a proper function term are moved 
+    	in negated form to the head.
+
+	false (default): no 
+
+    	true: yes
+
+  	Example: the clause
+
+	r(X) :- p(X,f(a)), f(X)=X, q(X,a)
+
+	becomes
+
+	r(X) ; not_p(X,f(a)) ; 'not_='(f(X), X) :- q(X,a)
+
+	Additionally the constraints
+
+	false :- p(X,Y), not_p(X,Y).
+	false :- X=Y, 'not_='(X,Y).
+
+	are added.
+
+	An interesting flag combination is 
+
+	--flattening standard 
+	--flattenhead false 
+	--flattentoplevel true 
+	--flattenequations false 
+	--flatteningextractconstants false 
+	--shifting true
+
+	The rationale behind this flag setting is to remove all proper 
+	function terms from the body (at the dispense of introducing a 
+	new head), while at the same time keeping the body as instantiated
+	as possible (and thus as restrictive as possible).
+
+  	Example (1): the clause 
+
+	r(X) :- p(X,f(a)), f(X)=X, q(X,a)
+
+	Flattening under the options above will first result in the clause
+
+	r(X) :- p(X,U), f(X)=X, q(X,a), f(a)=U
+
+	and then, under shifting
+
+	r(X) ; 'not_='(f(a),U) ; 'not_='(f(X), X) :- p(X,U), q(X,a).
+
+	This clause is more restrictive than the clause
+
+	r(X) ; not_p(X,f(a)) ; 'not_='(f(X), X) :- q(X,a)
+
+	obtained from shifting alone because of its additional body 
+	literal p(X,U).
+
+	Example (2):
+
+	p(f(a)) :- q(X,a,f(b)).
+
+	Flattening under the options above will first result in the clause
+
+	p(f(a)) :- q(X,a,Z), f(b)=Z.
+
+	And shifting will give 
+
+	p(f(a)) ; 'not_='(f(b),Z) :- q(X,a,Z).
+
+
+  --separation 
+
+	Not described in the paper, perhaps obsolete.
+
+	nonequations (default): only the nonequations are separate away.
+
+	none: nothing is separated away (inhibiting this transformation).
+
+	full: all body atoms are separated away.
+
+	Example: the clause
+	r :- p(f(a)).
+
+	With option 'nonequations' the clause becomes (notice the equations, 
+	which come in by flattening, which is done first, 
+	--flattentoplevel true assumed):
+
+	abst_def_4(A) :- 
+	    p(A).
+	r :- 
+	    abst_def_4(A),
+	    f(B) = A,
+	    a = B.
+
+	With option 'none' the clause becomes:
+
+	r :- 
+	    p(A),
+	    f(B) = A,
+	    a = B.
+
+	With option 'full' the clause becomes:
+
+	abst_def_4(A, B, C, D, E) :- 
+	    p(A),
+	    B = C,
+	    D = E.
+	r :- 
+	    abst_def_4(A, f(B), A, a, B).
+
+	See also the defintion of the predicate abstraction_protected 
+	in the file range_restriction.pl 
+
+ --rangerestriction
+
+   	Whether clauses become range-restricted or not.
+
+	true (default): yes
+
+	false: no
+	(Does not go well together with --blocking true below)	
+
+ --blocking
+
+	Whether the blocking transformation is applied or not.
+
+	false (default): no
+
+	true: yes
+
+	For instance, the clause set
+
+	p(a).
+	p(f(X)) :- p(X).
+
+	translated with the option
+
+	--blocking true
+
+	gives the clause set
+
+	p(a).
+	dom(a).
+	p(f(A)) :- 
+	    p(A).
+	dom(f(A)) :- 
+	    p(A).		
+
+	dom(A) :- 		%% with a term its subterms are domain elements
+	    dom(f(A)).		
+
+        %% Up to here the the transformation accomplishes range restriction
+
+	subterm(A, A) :- 	%% subterm relation: reflexivity
+	    dom(A).		
+	subterm(A, f(B)) :- 	%% subterm relation, restricted to domain
+	    subterm(A, B),	%% elements
+	    dom(A),
+	    dom(f(B)).
+
+	%% The following two clauses speculate equality between
+	%% a domain element and a subterm. That is, the domain
+	%% element and a subterm may be equal, or not.
+
+	false :- 
+	    A = B,
+	    nonequal(A, B).
+	A = B ; nonequal(A, B) :- 
+	    dom(B),
+	    dom(A),
+	    subterm(B, A).
+
+	%% End of clause set
+
+	The previous clause set when converted to dfg syntax and 
+	fed to MSPASS with the options
+
+	MSPASS -Auto=1 -Select=2 -Sorts=0 -Splits=-1 -EqualDom=1
+
+	will result in a (finitely) saturated set.
+	The EqualDom option is an addition to (M)SPASS. Its effect
+	is to have equality literals dominate all other literals.
+
+	Notice that enabling full splitting (-Splits=-1) and having
+	equality the dominating predicate symbol (-EqualDom=1) is
+	crucial for termination. The reason is, only then, in
+	the disjunction derived
+
+	nonequal(f(a),a) \/ equal(f(a),a)
+
+	the second literal equal(f(a),a) will be greater in the 
+	ordering than nonequal(f(a),a), and a split with this disjunction 
+	will lead to the case where equal(f(a),a) is considered first, 
+	and the redundancy criteria in MSPASS are strong enough to prevent 
+	nontermination.
+
+	In particular, there is no derivation
+
+	p(a), p(f(a)), p(f(f(a))) ....
+
+	in presence of equal(f(a),a).
+
+
+Thanks
+------
+Some library code for input/output is taken from Christoph Wernhard's
+KRHyper distribution.

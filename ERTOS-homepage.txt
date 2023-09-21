@@ -1,0 +1,59 @@
+General overview
+
+Peter is a Research Leader in the Software Systems Research group. His
+research interest is in automated deduction, in particular automated reasoning
+in first-order logic and its applications, in particular for business rules
+and process analysis.
+
+
+Previous positions
+
+Principal researcher with NICTA since 2005 with positions as Program Leader,
+Research Group Manager, and (currently) Research Leader; Research scientist at
+the Max-Planck-Institut for Computer Science in Saarbrücken (Germany) from
+2003 to 2005; Research scientist at the University of Koblenz (Germany), from
+1990 to 2003; Honorary research associate at the University of New Brunswick
+(Canada) in 1998; Acting professorship at the University Giessen (Germany) in
+2000 and 2001; Research scientist at the Technical University of Munich
+(Germany) from 1989 to 1990.
+
+Qualifications
+
+<ul>
+<li>Habilitation for Computer Science at the University of Koblenz, Germany, 2002
+<li>Doctoral Degree in Computer Science, University of Koblenz, Germany, 1996
+<li>Diplom in Informatik, Technical University of Munich, Germany, 1988.
+</ul>
+
+
+Research interests 
+
+Advancement of automated deduction, in particular first-order logic theorem
+proving; applications for software verification, knowledge representation, and
+business rules/process analysis; exploiting connections into related areas such as logic
+programming, description logics and nonmonotonic reasoning.
+ 
+NICTA projects
+
+<a href="https://stage.ssrg.nicta.com.au/projects/PCBRP/">Provably Correct
+Business Rules and Processes</a> (current, leader); <a
+href="http://www.nicta.com.au/research/completed_projects/situation_awareness_by_inference_and_logic/sail_project">Situation
+Awareness by Inference and Logic</a> (past, leader), <a
+href="http://www.nicta.com.au/research/projects/constraint_programming_platform">Constraint
+Programming Platform (G12)</a> (past, team member) 
+
+Collaborations
+
+Recent collaborations include academic institutions and government
+organizations. In particular the University of Koblenz (Germany), the
+Max-Planck Institute for Computer Science (Germany), the University of Iowa
+(USA), Defence Science Technology Organization (Australia) and New South Wales
+Land and Property Information (Australia).
+
+Affiliations
+
+NICTA and Australian National University
+
+Awards
+
+Invited talks: A First-Order Davis-Putnam-Loveland-Logemann Procedure, Distinguished paper track, IJCAI, 2011; Logical Engineering with Instance-Based Methods, CADE, 2007.

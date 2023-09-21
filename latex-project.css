@@ -1,0 +1,136 @@
+body {
+	margin:0px;
+	padding:0px;
+	color:#000;
+	background-color:#edb;
+	font-family:sans-serif;
+}
+
+#header {
+	padding-top:20px;
+	padding-bottom:10px;
+	color:inherit;
+	background-color:#db9;
+	border-bottom:1px solid black;
+}
+
+#logo {
+	height:120px;
+	background-image:url('img/lion.png');
+	background-repeat:no-repeat;
+	background-position:left;
+}
+
+h1 {
+	float:right;
+	width:80%;
+	margin:0px;
+	margin-top:20px;
+	padding:0px;
+	text-align:left;
+}
+
+#latex {
+	clear:both;
+	background-image:url('img/latex.png');
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	height:30px;
+	border-top:1px solid #864;
+}
+
+#content, #nav {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#header, #main {
+	padding-left:2%;
+	padding-right:2%;
+}
+
+#breadcrumb {
+	border-bottom-style:solid;
+}
+
+h1, #content {
+	float:right;
+	width:79%;
+}
+
+.leftcolumn {
+        float:left;
+        width:47%;
+}
+
+.rightcolumn {
+        float:right;
+        width:47%;
+}
+
+#logo, #nav {
+	float:left;
+	width:19%;
+}
+
+#footer {
+	clear:both;
+	border-top-style:solid;
+}
+
+#breadcrumb, #footer {
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	border-color:#000;
+	border-width:1px;
+}
+
+.fineprint {
+        clear:both;
+	padding-top:20px;
+}
+
+#breadcrumb, #footer, #nav, .fineprint {
+	font-size:80%;
+}
+
+#nav h2 {
+        font-size:125%;
+        margin-top:2ex;
+}
+
+dl#news dt {
+        margin-top:2ex;
+}
+
+img {
+	border:0px;
+}
+
+ol ol {
+	list-style-type:lower-alpha;
+}
+
+ol ol ol {
+	list-style-type:decimal;
+}
+
+#content dt {
+        margin-top:2ex;
+}
+
+#nav dd {
+	margin-left:1em;
+}
+
+.example {
+	color:inherit;
+	background-color:#ddd;
+	padding:1em;
+	border:1px solid black;
+}
+
+.hide {
+	display:none;
+}

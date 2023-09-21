@@ -1,0 +1,72 @@
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2004.11.3)  15 MAR 2006 14:22
+entering extended mode
+**&latex prv_mail.ini \nonstopmode\nofiles\PassOptionsToPackage{active,tightpag
+e,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[disp
+laymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi}\i
+nput{mail.tex}
+(./prv_mail.ini
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/carlisle/mylatex.ltx)
+(/usr/share/texmf/tex/latex/tools/.tex File ignored))
+No auxiliary output files.
+
+(./mail.tex (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/home/users/baumgart/texmf/tex/latex/vfinst/segoe.sty)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+LaTeX Font Info:    Try loading font information for OT1+msg on input line 5.
+
+(/home/users/baumgart/texmf/tex/latex/vfinst/ot1msg.fd
+File: ot1msg.fd 2005/06/12 Fontinst v1.801 font definitions for OT1/msg.
+) )
+Beginning to dump on file prv_mail.efmt
+ (format=prv_mail 2006.3.15)
+4518 strings of total length 58272
+44851 memory locations dumped; current usage is 207&43337
+3321 multiletter control sequences
+\font\nullfont=nullfont
+\font\OMX/cmex/m/n/5=cmex10
+\font\tenln=line10
+\font\tenlnw=linew10
+\font\tencirc=lcircle10
+\font\tencircw=lcirclew10
+\font\OT1/cmr/m/n/5=cmr5
+\font\OT1/cmr/m/n/7=cmr7
+\font\OT1/cmr/m/n/10=cmr10
+\font\OML/cmm/m/it/5=cmmi5
+\font\OML/cmm/m/it/7=cmmi7
+\font\OML/cmm/m/it/10=cmmi10
+\font\OMS/cmsy/m/n/5=cmsy5
+\font\OMS/cmsy/m/n/7=cmsy7
+\font\OMS/cmsy/m/n/10=cmsy10
+\font\OT1/cmr/m/n/12=cmr12
+\font\OT1/cmr/m/n/8=cmr8
+\font\OT1/cmr/bx/n/10=cmbx10
+\font\OT1/cmr/bx/it/10=cmbxti10
+\font\OT1/cmr/m/it/10=cmti10
+\font\OT1/cmtt/m/n/10=cmtt10
+\font\OT1/msg/m/n/10=msgr7t
+6507 words of font info for 21 preloaded fonts
+14 hyphenation exceptions
+Hyphenation trie of length 6075 has 181 ops out of 35111
+  181 for language 0
+No pages of output.

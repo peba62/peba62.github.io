@@ -1,0 +1,93 @@
+#!/bin/sh
+
+## krh-yarralumla-run - 
+## This script calls first yarrralumla and then krh-run on the given 
+## problem file.
+##
+## Author: P. Baumgartner
+
+## Give full path to executable here if not in search path:
+yarralumla="yarralumla.pl"
+krh_run="krh-run"
+
+krh_run_standard_options="-e"
+
+## No user servicable part beyond this point
+base=
+done=
+flattening="none"
+shifting="false"
+blocking="false"
+verbose="true"
+separation="none"
+
+usage () { 
+    echo "usage: krh-yarralumla-run [-q] [-fl] [-sh] [-sep] [-bl] FILE[.tme]"
+    echo "       -q: quiet (less output during search from krh)"
+    echo "       -fl: flattening on"
+    echo "       -sh: shifting on"
+    echo "       -sep: separation on"
+    echo "       -bl: blocking on"
+    echo "       -h: help (this text)"
+    exit -1
+}
+
+if [ -z $1 ]; then usage; fi
+
+while ([ ! $done ]); do
+    if [ "$1" = "-sh" ]
+    then
+	shifting="true"
+	shift
+    elif [ "$1" = "-q" ]
+    then
+	verbose="false"
+	shift
+    elif [ "$1" = "-bl" ]
+    then
+	blocking="true"
+	shift
+    elif [ "$1" = "-fl" ]
+    then
+	flattening="standard"
+	shift
+    elif [ "$1" = "-sep" ]
+    then
+	separation="nonequations"
+	shift
+    elif [ "$1" = "-h" ]
+    then
+	usage
+    elif [ $1 ]
+    then
+	base=`dirname $1`/`basename $1 .tme`
+	if [ ! -r "$base.tme" ]; then
+	    echo "File not found: $base.tme"
+	    exit -1
+	fi
+	done=1
+    else
+        echo "Incomplete argument list."
+	exit -1;
+    fi
+done
+
+
+if [ $verbose = true ]; then
+    krh_run_verbosity_options="-v"
+else
+    krh_run_verbosity_options=""
+fi
+
+if [ $shifting = true ]; then
+    # this is a very special call:
+    yarralumla_flattening_options="--flattening standard --flattenhead false --flattentoplevel true --flattenequations false --flatteningextractconstants false " 
+else 
+    ## what was given on the command line:
+    yarralumla_flattening_options="--flattening $flattening"
+fi
+
+echo "$yarralumla  $yarralumla_flattening_options --separation $separation --blocking $blocking --shifting $shifting $base.tme ..."
+$yarralumla $yarralumla_flattening_options --separation $separation --blocking $blocking --shifting $shifting $base.tme
+$krh_run $krh_run_standard_options $krh_run_verbosity_options $base-yarr.tme
+#

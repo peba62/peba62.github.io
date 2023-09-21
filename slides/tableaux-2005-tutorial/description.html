@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Instance Based Methods</TITLE>
+<META NAME="description" CONTENT="Instance Based Methods">
+<META NAME="keywords" CONTENT="description">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="description.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1 ALIGN="CENTER"><B>Instance Based Methods</B></H1>
+<DIV CLASS="author_info">
+
+<P ALIGN="CENTER"><STRONG><BIG CLASS="LARGE">Peter Baumgartner</BIG></STRONG></P>
+<P ALIGN="CENTER"><I>Programming Logics Group</I><br>
+Max-Planck-Institut für Informatik</P>
+</DIV>
+<DIV CLASS="author_info">
+
+<P ALIGN="CENTER"><STRONG><BIG CLASS="LARGE">Gernot Stenz</BIG></STRONG></P>
+<P ALIGN="CENTER"><I>Institut für Informatik</I><br>
+Technische Universität München</SMALL></P>
+</DIV>
+<P ALIGN="CENTER"><STRONG>September 2005</STRONG></P>
+
+<P>
+The term ``instance based methods'' (IBM) refers to a family of methods
+for first-order logic theorem proving. IBMs share the principle of
+carrying out proof search by maintaining a set of instances of input
+clauses and analyzing it for satisfiability until completion. IBMs are
+conceptually essentially different to well established methods like
+resolution or free-variable analytic tableaux. Also, IBMs exhibit a
+search space and termination behaviour (in the satisfiable case)
+different from those methods, which makes them attractive from a
+practical point of view as a complementary method. This observation is
+also supported empirically by results obtained with the first serious
+implementations available (carried out by Letz and Stenz, cf. the
+system competitions (CASC) at CADE-18 and CADE-19).
+
+<P>
+The idea behind IBMs is already present in a rudimentary way in the
+work by Davis, Putnam, Logemann and Loveland in the early sixties. The
+contemporary stream of research on IBMs was initiated with the
+Plaisted's Hyperlinking calculus in 1992. Since then, other methods
+have been developed by Plaisted and his coworkers. Billon's
+disconnection calculus was picked up by Letz and Stenz and has been
+significantly developed further since then. New methods have also been
+introduced by Hooker, Baumgartner and Tinelli, and more recently by
+Ganzinger and Korovin.  The stream of publications over the last years
+demonstrates a growing interest in IBMs. The ideas presented there
+show that research on IBMs still is in the middle of development, and
+that there is high potential further improvements and extensions like
+equality and theory handling, which is currently investigated.
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+Contents</A>
+</H2>
+In the tutorial, we will cover the following topics:
+Early IBMs, the common principle behind IBMs; 
+classification of IBMs (one-level vs. two-level calculi),
+comparison to resolution and free variable tableaux;
+selected IBMs in greater detail: ordered semantic hyper linking,
+the disconnection method, the model evolution calculus;
+the completeness proof of one selected method; extension to equality
+reasoning; implementation techniques, particularly the disconnection
+method.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Presenters</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Peter Baumgartner</SPAN> has (co-)authored 13 journal articles, 32
+conference or referred workshop papers, and five chapters in
+books. Most publications are concerned with calculi, implementations
+and applications of first-order logic automated deduction systems.
+He developed a First-Order version FDPLL of the propositional
+Davis-Putnam-Logemann-Loveland procedure.  This method, and its
+successor, the Model Evolution Calculus (jointly developed with
+Cesare Tinelli) are his recent main contributions to instance based
+methods. 
+
+<P>
+<SPAN  CLASS="textit">Gernot Stenz</SPAN> has been directly involved in instance based theorem proving
+for several years. He is the (co-)author of 12 scientific papers and system
+descriptions at international conferences and some other publications in
+journals and books. Nearly all of his more recent publications deal with
+instance based theorem proving in general and the disconnection calculus in
+particular. The implementation of theorem prover systems is among his
+principal matters of interest, he was a co-author of the e-SETHEO prover
+system, where his work also included automated learning methods for theorem
+provers and he has been developing and improving the DCTP theorem prover
+implementation of the disconnection calculus. Both of these systems have won
+trophies at the annual CADE theorem prover competitions.
+
+<ADDRESS>
+Peter Baumgartner
+2005-08-26
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,148 @@
+#!/bin/sh
+
+krh=/home/users/baumgart/prover/bin/krh-hashdt
+script_dir=/home/users/baumgart/prover/lib/krh/scripts
+tmpconfig=/tmp/krhconfig-$USER.tme
+
+base=
+file_list_file=
+done=
+extent=
+possible_models=
+verb="false"
+## preproc="cat"
+preproc="perl -n -p -e 's/is\(/my_is\(/g'"
+## preproc="$script_dir/pre.pl"
+# max_weight=1000
+max_weight=unset
+
+usage () { 
+    echo "usage: krh-run [-e] [-h] [-p] [-u] [-v] [-w N] FILE[.tme]"
+    echo "       krh-run [-e] [-h] [-p] [-u] [-v] [-w N] -i FILE"
+    echo "       -e: print extent (prints model after run)"
+    echo "       -h: help (this text)"
+    echo "       -p: add transformation for possible model semantics"
+    echo "       -u: add transformation for unstratified negation"
+    echo "       -v: verbose"
+    echo "       -w N: set max weight to N"
+    echo "       -i: concatenate all files listed in FILE to FILE.tme,"
+    echo "           and use FILE.tme as input then"
+    exit -1
+}
+
+if [ -z $1 ]; then usage; fi
+
+while ([ ! $done ]); do
+    if [ "$1" = "-u" ]
+    then
+	preproc="$script_dir/naf.pl"
+	shift
+    elif [ "$1" = "-v" ]
+    then
+	verb="true"
+	shift
+    elif [ "$1" = "-e" ]
+    then
+	extent=1
+	shift
+    elif [ "$1" = "-p" ]
+    then
+	possible_models=1
+	shift
+    elif [ "$1" = "-h" ]
+    then
+	usage
+    elif [ "$1" = "-w" ]
+    then
+	shift
+	max_weight=$1
+	shift
+    elif [ "$1" = "-i" ]
+    then
+	shift
+	file_list_file=$1
+	if [ ! -r $file_list_file ]; then
+	    echo "File not found: $file_list_file"
+	    exit -1
+	fi
+	done=1
+    elif [ $1 ]
+    then
+	base=`dirname $1`/`basename $1 .tme`
+	if [ ! -r "$base.tme" ]; then
+	    echo "File not found: $base.tme"
+	    exit -1
+	fi
+	done=1
+    else
+        echo "Incomplete argument list."
+	exit -1;
+    fi
+done
+
+## Prepare the net input file $base.tme if -i flag was given
+if [ -n "$file_list_file" ]; then
+    ## Collect the contents of the files listed in $file_list_file
+    ## and use it as input to krh 
+    base=$file_list_file
+    if [ "$verb" = true ]; then 
+	echo -n "% Preparing input file $base.tme from "; 
+    fi
+    cat /dev/null > $base.tme
+    for file in `cat $file_list_file`; do 
+        ifile=`dirname $file`/`basename $file .tme`.tme
+	if [ ! -r $ifile ]; then 
+	    echo
+	    echo "File not found: $ifile"
+	    exit -1
+	else 
+	    cat $ifile >> $base.tme
+	    if [ "$verb" = true ]; then 
+		echo -n "$ifile "; 
+	    fi
+	fi
+    done
+    if [ "$verb" = true ]; then echo; fi
+fi
+
+if (! test $max_weight = unset) then
+     echo "#(set_parameter(max_weight_initial,$max_weight))." > $tmpconfig
+     echo "#(set_parameter(max_weight_increment,-1))." >> $tmpconfig
+#      echo "#(set_parameter(max_weight_initial,3))." > $tmpconfig
+#      echo "#(set_parameter(max_weight_increment,1))." >> $tmpconfig
+    echo "#(set_parameter(weighing_method,1))." >> $tmpconfig
+else
+     echo "#(set_parameter(max_weight_initial,2))." > $tmpconfig
+     echo "#(set_parameter(max_weight_increment,1))." >> $tmpconfig
+    echo "#(set_parameter(weighing_method,1))." >> $tmpconfig
+fi
+
+echo "#(set_flag(show_derived_literals,$verb))." >> $tmpconfig
+echo "#(set_flag(proof_terms,true))." >> $tmpconfig
+#echo "#(clear_builtins)." >> $tmpconfig
+echo "#(set_verbosity(2))." >> $tmpconfig
+echo "#(set_flag(sort_heads,false))." >> $tmpconfig
+#echo "#(set_flag(negative_units,false))." >> $tmpconfig
+echo "#(set_flag(echo,on))." >> $tmpconfig
+echo "#(set_message_output(stdout))." >> $tmpconfig
+echo "#(run)." >> $tmpconfig
+echo "#(onto_file([#(print_proof)],'$base.prot'))." >> $tmpconfig
+test $extent && (echo "#(print_extent)." >> $tmpconfig)
+
+if [ -n "$possible_models" ]
+    then $script_dir/poss.pl -v2 $base.tme > $base-pm.tme
+	 finalfile=$base-pm.tme
+    else finalfile=$base.tme
+fi
+
+#$script_dir/$preproc $base.tme | $krh  - $tmpconfig
+# $script_dir/poss.pl $base.tme | $script_dir/naf.pl | $script_dir/canfilter.pl | $krh  - $tmpconfig
+
+# $preproc
+# perl -n -p -e 's/is\(/my_is\(/g' $finalfile | $script_dir/canfilter.pl | $krh  - $tmpconfig
+$preproc $finalfile | $script_dir/canfilter.pl | $krh  - $tmpconfig
+
+if [ -n "$possible_models" ]; then rm -f $base-pm.tme
+fi
+
+#

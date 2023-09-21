@@ -1,0 +1,25 @@
+Termin: 1.3.2005, 13 c.t.
+
+Themen
+------
+
+Michael Späth
+kilroy@uni-koblenz.de
+Beschreibungslogiken
+
+Peter Hasenpflug
+peha@uni-koblenz.de
+Kombination von Entscheidungsverfahren
+
+Sebastian Bochra
+bochra@uni-koblenz.de
+Abstract Congruence Closure
+
+Victor Rach
+rach@uni-koblenz.de
+Automatentheorie für Presburger Arithmetik
+
+Stefan Dötsch
+littlepu@uni-koblenz.de
+Guarded Fragment
+
